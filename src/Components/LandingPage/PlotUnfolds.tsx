@@ -16,7 +16,7 @@ type TabData = {
 };
 
 const tabData: TabData[] = [
-  {
+  {   
     id: "watch",
     label: "WATCH",
     icon: Eye,
