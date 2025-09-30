@@ -9,15 +9,18 @@ const HeroSection: React.FC = () => {
     `,
       }}
     >
+      <div className="relative">
+
       <div
-        className="absolute inset-0 h-[600px] w-[600px] left-0 top-0 -z-10"
+        className="absolute inset-0 h-[600px] w-[600px] left-0 -top-2 -z-10"
         style={{
           background: `linear-gradient(46.53deg, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
           opacity: 0.15,
           boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
           filter: `blur(100px)`,
         }}
-      ></div>
+        ></div>
+        </div>
       {/* <Header /> */}
 
       <section className="flex items-center justify-center pt-[320px] text-white font-renner">
