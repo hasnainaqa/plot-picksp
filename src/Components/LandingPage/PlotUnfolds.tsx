@@ -1,9 +1,12 @@
 // src/Components/LandingPage/PlotUnfolds.tsx
 import { useState } from "react";
-import { Eye, Lightbulb, Trophy, DollarSign } from "lucide-react";
+import { Eye, Lightbulb, Trophy, Banknote } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { type LucideIcon } from "lucide-react";
-import PlotUnfold from "../assets/PlotUnfold.svg";
+import PlotUnfold from "./assets/PlotUnfold.svg";
+import Predict from "./assets/Predict.svg";
+import Win from "./assets/Win.svg";
+import GetPaid from "./assets/GetPaid.svg";
 
 type TabData = {
   id: string;
@@ -16,14 +19,14 @@ type TabData = {
 };
 
 const tabData: TabData[] = [
-  {   
+  {
     id: "watch",
     label: "WATCH",
     icon: Eye,
     title: "Your front-row seat to the drama",
     content: [
       "With PlotPicks, you’re not just watching your favorite shows, you’re predicting every twist, every recoupling, and every shocking score as it happens.",
-      "PlotPicks puts you in the game. Every episode becomes a chance to prove you called it first and to cash in on your reality TV expertise.",
+      "PlotPicks puts you in the game. Every episode becomes a chance to prove you called it first and to cash in on your reality TV expertise. ",
     ],
     tagline: "It's not just TV anymore. It's your turn to play.",
     image: PlotUnfold,
@@ -34,11 +37,11 @@ const tabData: TabData[] = [
     icon: Lightbulb,
     title: "Think You Know what's comming next...",
     content: [
-      "Before the episode airs, lock in your predictions. Who will be eliminated? Who will find love? Make your picks based on trailers, teasers, and your own intuition.",
-      "Our intuitive interface makes it easy to place your bets on all the key moments. The more accurate you are, the more points you score.",
+      "PlotPicks puts your instincts to the test. Every prediction is your chance to outsmart the storyline, prove you’re one step ahead, and rise above the crowd.",
+      "Go bold. Trust your gut. Lock in your call before the next reveal flips the script. This isn’t guessing it’s gameplay.",
     ],
-    tagline: "Think you know what happens next? Prove it.",
-    image: "/images/plot-predict.jpg",
+    tagline: "The real players don’t just watch the drama. They predict it.",
+    image: Predict,
   },
   {
     id: "win",
@@ -46,23 +49,24 @@ const tabData: TabData[] = [
     icon: Trophy,
     title: "Know more, win more",
     content: [
-      "Compete against friends and fans across the country. Track your ranking in real-time on the global leaderboard and earn bragging rights.",
-      "Winning isn’t just about points. Unlock exclusive badges, achievements, and rewards as you prove your prediction prowess week after week.",
+      "In PlotPicks contests, the top 20% in cold hard cash. Each correct call pushes you closer to the payout zone, climbing the leaderboard and proving you’re amongst the best.",
+      "Daily challenges and  prize pools are your shot to rise above the crowd. Rack up wins, collect real rewards, and join the elite who turn predictions into profit.",
     ],
-    tagline: "Turn your TV obsession into tangible rewards.",
-    image: "/images/plot-win.jpg",
+    tagline: "Do you have what it takes to finish in the top 20%?",
+    image: Win,
   },
   {
     id: "getPaid",
     label: "GET PAID",
-    icon: DollarSign,
+    icon: Banknote,
     title: "You wins, Your way, Your wallet",
     content: [
-      "Your correct predictions translate directly into cash prizes. At the end of each season, top players can withdraw their winnings securely and easily.",
-      "We offer multiple payout options to get your money quickly. It’s the ultimate reward for being the most dedicated and insightful fan.",
+      "Every victory deserves a payday. With PlotPicks, your winnings hit your wallet fast, secure, and on your terms.",
+      "Choose cash-out straight to your card, direct to your bank, or through trusted wallets like PayPal or Venmo. No delays. No headaches. Just real money, right where you want it.",
     ],
-    tagline: "Get paid for being a super fan. It’s that simple.",
-    image: "/images/plot-paid.jpg",
+    tagline:
+      "Because in this game, every twist you conquer isn’t just bragging rights  it’s cash in your pocket.",
+    image: GetPaid,
   },
 ];
 
@@ -110,7 +114,6 @@ const PlotUnfolds: React.FC = () => {
           ))}
         </div>
 
-        {/* Content Card */}
         <div
           className="mx-auto max-w-6xl overflow-hidden rounded-[20px] border border-white/10 bg-black/30 backdrop-blur-sm"
           style={{
@@ -118,12 +121,11 @@ const PlotUnfolds: React.FC = () => {
           }}
         >
           <div className="grid md:grid-cols-2">
-            {/* Left Column: Text Content */}
             <div className="px-12 py-8">
               {activeContent && (
                 <>
                   <div className="mb-6 flex items-center gap-4 text-white ">
-                    <activeContent.icon size={20} />
+                    <activeContent.icon size={24} />
                     <span className="font-medium text-lg leading-[100%] tracking-[0%]">
                       {activeContent.label}
                     </span>
@@ -139,7 +141,7 @@ const PlotUnfolds: React.FC = () => {
                   <p className="mt-6 font-semibold italic text-white">
                     {activeContent.tagline}
                   </p>
-                  
+
                   <button className="mt-8 rounded-full border  px-8 py-5 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 hover:bg-purple-600/20 focus:outline-none ">
                     Join Now
                   </button>

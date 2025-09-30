@@ -1,8 +1,8 @@
 import React from "react";
-import RowToAction1 from "../assets/RowToAction1.svg";
-import RowToAction2 from "../assets/RowToAction2.svg";
-import RowToAction3 from "../assets/RowToAction3.svg";
-import RowToAction4 from "../assets/RowToAction4.svg";
+import RowToAction1 from "./assets/RowToAction1.svg";
+import RowToAction2 from "./assets/RowToAction2.svg";
+import RowToAction3 from "./assets/RowToAction3.svg";
+import RowToAction4 from "./assets/RowToAction4.svg";
 
 type Feature = {
   text: string;

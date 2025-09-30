@@ -1,5 +1,5 @@
 import { useState } from "react";
-import ClaimSpot from "../assets/ClaimSpot.svg";
+import ClaimSpot from "./assets/ClaimSpot.svg";
 
 export default function ClaimSpotForm() {
   const [firstName, setFirstName] = useState("");
