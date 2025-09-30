@@ -1,0 +1,27 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+
+}
+@layer base {
+  * {
+    @apply leading-[100%];
+  }
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+body {
+  background-color: #030005;
+}
+
+.font-renner {
+  font-family: 'Renner*', 'Inter', 'Arial', sans-serif;
+}

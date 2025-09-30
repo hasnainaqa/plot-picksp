@@ -1,0 +1,45 @@
+import PP from "../assets/PP.svg";
+import Button from "./ui/Button";
+
+export default function ReferralsRewards() {
+  return (
+    <div className="relative py-[174px] text-white flex items-center justify-center font-renner">
+      <div
+        className="absolute top-0 right-0 h-[500px] w-[500px] -z-10"
+        style={{
+          background: `linear-gradient(to right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
+          opacity: 0.15,
+          boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
+          filter: `blur(100px)`,
+        }}
+      ></div>
+
+      <div className="max-w-full w-full gap-[100px] items-center flex justify-between">
+        <div className="space-y-4 p-[60px]">
+          <h1 className="text-5xl font-semibold mb-2">Referrals + Rewards</h1>
+
+          <p className="text-base leading-[26px] tracking-[0] font-normal">
+            Turn the waitlist into your first big win. Every friend you invite
+            isn't just another signup: they're your power-up.
+          </p>
+
+          <p className="text-base leading-[26px] tracking-[0] font-normal">
+            Stack referrals to unlock exclusive perks: early beta access, bonus
+            contest entries, and special rewards that put you ahead before the
+            first game even begins.
+          </p>
+
+          <p className="text-base leading-[26px] tracking-[0] font-normal">
+            The bigger your squad, the bigger your edge. Build your crew, climb
+            the ranks, and cement your place as a PlotPicks pioneer. Don't just
+            stand in line, lead it.
+          </p>
+
+          <Button>Share Your Link</Button>
+        </div>
+
+        <img src={PP} alt="" className="hidden lg:block" />
+      </div>
+    </div>
+  );
+}
