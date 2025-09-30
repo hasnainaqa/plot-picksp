@@ -67,7 +67,7 @@ export default function ClaimSpotForm() {
             </div>
 
             <div
-              className="relative w-full lg:w-auto lg:-ml-36 rounded-b-3xl lg:rounded-tl-2xl p-6 sm:p-8 lg:p-5 z-10 lg:min-w-[750px] flex flex-col sm:flex-row gap-4"
+              className="relative w-full rounded-b-3xl lg:rounded-tl-2xl p-6 sm:p-8 lg:p-5 z-10 flex flex-col sm:flex-row gap-4 lg:-ml-36 lg:min-w-[744px]"
               style={{
                 background: `radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%)`,
               }}

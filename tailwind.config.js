@@ -11,6 +11,9 @@ content: [
       fontFamily: {
         inter: ["Inter", "sans-serif"],
       },
+      animation: {
+        'spin-slow': 'spin 6s linear infinite',
+      },
     },
     fontSize: {
       xs: ["0.75rem", "100%"], // 12px

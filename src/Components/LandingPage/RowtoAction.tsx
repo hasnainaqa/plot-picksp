@@ -39,12 +39,10 @@ const RowtoAction: React.FC = () => {
   return (
     <section className="w-full text-white px-4 sm:px-8 md:px-12 lg:px-[70px] font-renner flex items-center">
       <div className="w-full max-w-[1600px] mx-auto">
-        {/* Heading */}
         <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-semibold mb-6 md:mb-10 lg:mb-[51px] text-center lg:text-left">
           Front Row to the Action
         </h2>
 
-        {/* First Row */}
         <div className="relative flex flex-col lg:flex-row items-center gap-6">
           <div className="flex-1 z-10 w-full">
             <FeatureCard
@@ -54,7 +52,6 @@ const RowtoAction: React.FC = () => {
             />
           </div>
 
-          {/* Connector block (hidden on mobile) */}
           <div className="hidden lg:block absolute left-1/2 top-24 -translate-x-1/2 w-40 md:w-48 h-32 md:h-40 bg-black z-20 rounded-tl-3xl" />
 
           <div className="flex-1 z-30 w-full lg:-ml-36 xl:-ml-44 hidden lg:block">
@@ -66,7 +63,6 @@ const RowtoAction: React.FC = () => {
           </div>
         </div>
 
-        {/* Grid Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6">
           <FeatureCard
             text="Exclusive rewards for founding members"
