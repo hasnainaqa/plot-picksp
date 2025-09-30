@@ -12,7 +12,7 @@ content: [
         inter: ["Inter", "sans-serif"],
       },
       animation: {
-        'spin-slow': 'spin 6s linear infinite',
+        'spin-slow': 'spin 2s linear infinite',
       },
     },
     fontSize: {

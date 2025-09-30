@@ -11,7 +11,7 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <div className="relative inline-block rounded-full p-[1px] overflow-hidden group">
+    <div className="relative inline-block rounded-full p-[2px] overflow-hidden group">
       {/* Spinning purple gradient border (hidden on hover) */}
       <div
         className="
