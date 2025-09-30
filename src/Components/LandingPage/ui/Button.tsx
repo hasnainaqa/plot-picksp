@@ -33,8 +33,8 @@ const Button: React.FC<ButtonProps> = ({
       {/* Button itself */}
       <button
         className={`
-          relative z-10 px-10 py-3 font-semibold text-white rounded-full 
-          bg-black transition-colors duration-300
+          relative z-10 px-8 py-[19px] font-semibold text-white rounded-full 
+          bg-black transition-colors duration-300 text-sm leading-[100%]
           ${className}
         `}
         {...props}

@@ -1,16 +1,3 @@
-/* index.css */
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-:root {
-}
-@layer base {
-  * {
-    @apply leading-[100%];
-  }
-}
-
 @font-face {
   font-family: "Renner";
   src: url("/renner-/TrueType/Renner* 400 Book.ttf") format("truetype");
@@ -37,22 +24,4 @@
   src: url("/renner-/TrueType/Renner* 700 Bold Italic.ttf") format("truetype");
   font-weight: 700;
   font-style: italic;
-}
-
-body {
-  background-color: #030005;
-}
-
-/* .font-renner {
-  font-family: "Renner", "Inter", "Arial", sans-serif;
-} */
-
-html,
-body {
-  overflow-x: hidden;
-}
-#root {
-  width: 100%;
-  margin: 0;
-  text-align: center;
 }

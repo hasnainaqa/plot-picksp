@@ -1,18 +1,18 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-content: [
-  "./src/**/*.{js,jsx,ts,tsx}",       // inside src
-  "./components/**/*.{js,jsx,ts,tsx}",// components outside src
-  "./pages/**/*.{js,jsx,ts,tsx}",     // pages if any
-  "./app/**/*.{js,jsx,ts,tsx}"        // app folder if using App Router
-],
+  content: [
+    "./src/**/*.{js,jsx,ts,tsx}", // inside src
+    "./components/**/*.{js,jsx,ts,tsx}", // components outside src
+    "./pages/**/*.{js,jsx,ts,tsx}", // pages if any
+    "./app/**/*.{js,jsx,ts,tsx}", // app folder if using App Router
+  ],
   theme: {
     extend: {
       fontFamily: {
-        inter: ["Inter", "sans-serif"],
+        renner: ["Renner", "sans-serif"],
       },
       animation: {
-        'spin-slow': 'spin 2s linear infinite',
+        "spin-slow": "spin 2s linear infinite",
       },
     },
     fontSize: {

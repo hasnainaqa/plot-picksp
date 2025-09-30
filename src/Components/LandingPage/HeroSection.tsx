@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
           <h1 className="mb-4 font-bold leading-tight text-white text-5xl">
             Join the Future of Entertainment, Reimagined
           </h1>
-          <p className="max-w-2xl mb-8 text-lg">
+          <p className="max-w-2xl mb-8 text-2xl font-normal leading-[100%]">
             Be the first to experience PlotPicks — the app that lets you predict
             what happens next in your favorite shows and win rewards.
           </p>

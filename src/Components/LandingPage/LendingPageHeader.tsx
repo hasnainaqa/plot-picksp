@@ -16,7 +16,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`px-[60px] py-[30px] w-full font-[Renner*] text-[16px] font-normal fixed left-0 z-50 transition-all duration-300 font-renner`}
+      className={`px-[60px] py-[30px] w-full font-renner text-[16px] font-normal fixed left-0 z-50 transition-all duration-300`}
       style={{
         top: isScrolled ? "0px" : "35px",
         background:
@@ -41,7 +41,7 @@ const Header: React.FC = () => {
           <a href="#" className="hover:text-cyan-400 transition">
             Contact
           </a>
-          <button className="bg-gradient-to-b from-[#8E24AA] to-[#000000] px-8 py-5 rounded-full text-[14px] font-semibold transition text-center leading-100%">
+          <button className="bg-gradient-to-b from-[#8E24AA] to-[#000000] px-8 py-[18px] rounded-[32px] text-[14px] font-semibold transition text-center leading-[100%]">
             Join the Waitlist Now
           </button>
         </nav>

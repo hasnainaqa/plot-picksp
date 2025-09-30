@@ -1,6 +1,8 @@
 import React from "react";
 import RowToAction1 from "./assets/RowToAction1.svg";
 import RowToAction2 from "./assets/RowToAction2.svg";
+import RowToAction2_o from "./assets/RowToAction2_o.svg";
+
 import RowToAction3 from "./assets/RowToAction3.svg";
 import RowToAction4 from "./assets/RowToAction4.svg";
 
@@ -43,8 +45,9 @@ const RowtoAction: React.FC = () => {
           Front Row to the Action
         </h2>
 
-        <div className="relative flex flex-col lg:flex-row items-center gap-6">
-          <div className="flex-1 z-10 w-full">
+        <div className="relative flex flex-col xl:flex-row items-center justify-center gap-6">
+          {/* First Card */}
+          <div className="flex-1 w-full z-10">
             <FeatureCard
               text="Early access before public launch"
               imageUrl={RowToAction1}
@@ -52,12 +55,21 @@ const RowtoAction: React.FC = () => {
             />
           </div>
 
-          <div className="hidden lg:block absolute left-1/2 top-24 -translate-x-1/2 w-40 md:w-48 h-32 md:h-40 bg-black z-20 rounded-tl-3xl" />
+          {/* Middle Shape (only on large screens) */}
+          <div className="absolute left-1/2 top-24 -translate-x-1/2 w-[10%] h-40 bg-black z-20 rounded-tl-3xl hidden 2xl:block" />
 
-          <div className="flex-1 z-30 w-full lg:-ml-36 xl:-ml-44 hidden lg:block">
+          {/* Second Card */}
+          <div className="flex-1 w-full z-30  2xl:-ml-[10%] hidden 2xl:block">
             <FeatureCard
               text="Be the first to claim your unique handle"
               imageUrl={RowToAction2}
+              cornerStyle=""
+            />
+          </div>
+          <div className="flex-1 w-full z-30 block 2xl:hidden">
+            <FeatureCard
+              text="Be the first to claim your unique handle"
+              imageUrl={RowToAction2_o}
               cornerStyle=""
             />
           </div>
