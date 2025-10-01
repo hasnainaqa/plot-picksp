@@ -170,7 +170,7 @@ const PlotUnfolds: React.FC = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="w-full min-w-[524px] h-auto object-cover"
+                    className="w-full lg:min-w-[524px] h-auto object-cover"
                   />
                 </AnimatePresence>
               </div>
