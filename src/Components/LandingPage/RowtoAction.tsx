@@ -85,7 +85,7 @@ const RowtoAction: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:mt-0 mt-6">
           <FeatureCard
             texts={["Exclusive rewards for founding members"]}
             imageUrl={RowToAction3}
