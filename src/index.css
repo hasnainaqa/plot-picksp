@@ -5,11 +5,11 @@
 
 :root {
 }
-@layer base {
+/* @layer base {
   * {
     @apply leading-[100%];
   }
-}
+} */
 
 @font-face {
   font-family: "Renner";

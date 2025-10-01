@@ -121,28 +121,28 @@ const PlotUnfolds: React.FC = () => {
           }}
         >
           <div className="flex md:flex-row flex-col justify-between">
-            <div className="px-12 py-8">
+            <div className="px-12 py-8 items-start">
               {activeContent && (
                 <>
-                  <div className="mb-6 flex items-center gap-4 text-white ">
+                  <div className="mb-6 flex items-start gap-4 text-white ">
                     <activeContent.icon size={24} />
-                    <span className="font-medium text-lg leading-[100%] tracking-[0%]">
+                    <span className="font-medium text-lg text-start">
                       {activeContent.label}
                     </span>
                   </div>
-                  <h3 className="mb-4 font-semibold text-[24px] leading-[100%]">
+                  <h3 className="mb-4 font-semibold text-[24px] leading-[100%] text-start">
                     {activeContent.title}
                   </h3>
-                  <div className="space-y-4 font-normal text-[16px] !leading-[26px] tracking-[0%]">
+                  <div className="space-y-2 font-normal text-base leading-[26px] tracking-[0%] text-start">
                     {activeContent.content.map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>
-                  <p className="mt-6 font-semibold italic text-white">
+                  <p className="mt-2 font-bold text-base text-white text-start">
                     {activeContent.tagline}
                   </p>
 
-                  <button className="mt-8 rounded-full border  px-8 py-5 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 hover:bg-purple-600/20 focus:outline-none ">
+                  <button className="mt-8 rounded-full border  px-8 py-5 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 hover:bg-purple-600/20 focus:outline-none flex justify-start ">
                     Join Now
                   </button>
                 </>
