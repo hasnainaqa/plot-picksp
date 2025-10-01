@@ -18,15 +18,18 @@ export default function ClaimSpotForm() {
       // radial-gradient(circle at bottom left, #04203d 0%, transparent 25%)`,
       // }}
     >
+      <div className="relative">
+
             <div
-        className="relative -bottom-[530px] left-0 h-[500px] w-[500px] -z-10"
+        className="absolute -bottom-[680px] -left-10 h-[500px] w-[500px] -z-10"
         style={{
           background: `linear-gradient(to top right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
           opacity: 0.15,
           boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
           filter: `blur(100px)`,
         }}
-      ></div>
+        ></div>
+        </div>
       <div className="w-full relative flex items-center justify-center">
         <div className="flex flex-col lg:flex-row items-stretch w-full max-w-[1200px]">
           {/* Left side - Image */}
