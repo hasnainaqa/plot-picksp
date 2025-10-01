@@ -56,3 +56,6 @@ body {
   margin: 0;
   text-align: center;
 }
+.gradient-radial-purple {
+  background: radial-gradient(circle, #230231 0%, transparent 25%);
+}

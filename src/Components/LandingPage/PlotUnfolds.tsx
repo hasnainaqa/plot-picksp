@@ -130,7 +130,14 @@ const PlotUnfolds: React.FC = () => {
           }}
         >
           <div className="flex md:flex-row flex-col justify-between">
-            <div className="px-12 py-8 items-start">
+            <motion.div
+              initial={{ opacity: 0, x: -50 }}
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: -50 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+              className="px-12 py-8 items-start"
+            >
+              {" "}
               {activeContent && (
                 <>
                   <div className="mb-6 flex items-center gap-4 text-white ">
@@ -151,15 +158,19 @@ const PlotUnfolds: React.FC = () => {
                     {activeContent.tagline}
                   </p>
 
-                  <button className="mt-8 rounded-full border border-[#D8D8D8] h-[48px] px-8 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 text-sm focus:outline-none flex items-center "
-                  style={{
-                    background: `radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%)`,
-                  }}>
+                  <motion.button
+                    whileHover={{ scale: 1.05 }}
+                    whileTap={{ scale: 0.95 }}
+                    className="mt-8 rounded-full border border-[#D8D8D8] h-[48px] px-8 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 text-sm focus:outline-none flex items-center"
+                    style={{
+                      background: `radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%)`,
+                    }}
+                  >
                     Join Now
-                  </button>
+                  </motion.button>
                 </>
               )}
-            </div>
+            </motion.div>
 
             {/* Right Column: Image with Transition */}
             <div className="relative md:h-full md:px-4 md:py-6">
@@ -173,7 +184,7 @@ const PlotUnfolds: React.FC = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="w-full lg:min-w-[524px] h-auto object-cover"
+                    className="w-auto lg:min-h-[418px] lg:min-w-[524px] h-full object-cover"
                   />
                 </AnimatePresence>
               </div>
@@ -182,10 +193,10 @@ const PlotUnfolds: React.FC = () => {
         </div>
       </div>
       <div
-        className="absolute top-72 left-52 w-[700px] h-[700px] -z-10 rounded-full"
+        className="absolute top-72 left-36 w-[700px] h-[700px] -z-10 rounded-full"
         style={{
           background: `
-      radial-gradient(circle, #230231 0%, transparent 70%)
+      radial-gradient(circle, #12001A 30%, transparent 70%)
     `,
         }}
       />

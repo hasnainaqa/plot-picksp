@@ -40,11 +40,12 @@ export default function Footer() {
   return (
     <footer
       className="bg-[#03000580] text-white py-10 pt-[123px] px-[60px] font-renner"
-      style={{
-        background: `
-      radial-gradient(circle at top left, #051922 0%, transparent 25%)`,
-      }}
+      // style={{
+      //   background: `
+      // radial-gradient(circle at top left, #051922 0%, transparent 25%)`,
+      // }}
     >
+      
       <div className="flex justify-between items-center gap-12 mb-16">
         <div className="flex items-start ml-5">
           <img src={FooterLogo} alt="Footer Logo" />

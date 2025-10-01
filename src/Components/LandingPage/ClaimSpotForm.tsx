@@ -13,11 +13,20 @@ export default function ClaimSpotForm() {
   return (
     <div
       className="pb-[250px] px-4 flex items-center justify-center font-renner"
-      style={{
-        background: `
-      radial-gradient(circle at bottom left, #04203d 0%, transparent 25%)`,
-      }}
+      // style={{
+      //   background: `
+      // radial-gradient(circle at bottom left, #04203d 0%, transparent 25%)`,
+      // }}
     >
+            <div
+        className="relative -bottom-[530px] left-0 h-[500px] w-[500px] -z-10"
+        style={{
+          background: `linear-gradient(to top right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
+          opacity: 0.15,
+          boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
+          filter: `blur(100px)`,
+        }}
+      ></div>
       <div className="w-full relative flex items-center justify-center">
         <div className="flex flex-col lg:flex-row items-stretch w-full max-w-[1200px]">
           {/* Left side - Image */}

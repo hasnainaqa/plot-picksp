@@ -11,9 +11,9 @@ export default function ReferralsRewards() {
   return (
     <div className="relative py-[174px] text-white flex items-center justify-center font-renner">
       <div
-        className="absolute top-0 right-0 h-[500px] w-[500px] -z-10"
+        className="absolute top-12 right-0 h-[500px] w-[500px] -z-10"
         style={{
-          background: `linear-gradient(to right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
+          background: `linear-gradient(to top right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
           opacity: 0.15,
           boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
           filter: `blur(100px)`,
