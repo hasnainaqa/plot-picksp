@@ -52,13 +52,13 @@ export default function Footer() {
 
         <div className="flex flex-row gap-24 ">
           <div>
-            <h3 className="text-white font-semibold text-2xl mb-4">Company</h3>
+            <h3 className="text-white flex font-semibold text-2xl mb-4">Company</h3>
             <ul className="space-y-3">
               {companyLinks.map((item, index) => (
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="text-[#D1D1D1] font-normal text-base hover:text-white transition-colors"
+                    className="text-[#D1D1D1] flex font-normal text-base hover:text-white transition-colors"
                   >
                     {item.label}
                   </a>
@@ -68,13 +68,13 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold text-2xl mb-4">Help</h3>
+            <h3 className="text-white flex font-semibold text-2xl mb-4">Help</h3>
             <ul className="space-y-3">
               {helpLinks.map((item, index) => (
                 <li key={index}>
                   <a
                     href={item.href}
-                    className="text-[#D1D1D1] font-normal text-base hover:text-white transition-colors"
+                    className="text-[#D1D1D1] flex font-normal text-base hover:text-white transition-colors"
                   >
                     {item.label}
                   </a>
@@ -84,7 +84,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold text-2xl mb-4">
+            <h3 className="text-white font-semibold flex text-2xl mb-4">
               Follow Us
             </h3>
             <div className="flex gap-4">

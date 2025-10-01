@@ -79,7 +79,7 @@ const PlotUnfolds: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % tabData.length);
-    }, 80000);
+    }, 5000);
 
     return () => clearInterval(interval);
   }, []);
@@ -104,7 +104,7 @@ const PlotUnfolds: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveIndex(index)}
-              className={`rounded-full px-[72px] h-[50px] text-base font-medium transition-all leading-[150%] duration-300 ease-in-out focus:outline-none sm:text-base ${
+              className={`rounded-full w-[200px] h-[50px] text-base font-medium transition-all leading-[150%] duration-300 ease-in-out focus:outline-none sm:text-base ${
                 activeIndex === index
                   ? "bg-gradient-to-b from-blue-500 to-cyan-400 text-white"
                   : `border hover:bg-gray-800 `
@@ -151,7 +151,10 @@ const PlotUnfolds: React.FC = () => {
                     {activeContent.tagline}
                   </p>
 
-                  <button className="mt-8 rounded-full border border-[#D8D8D8] h-[48px] px-8 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 text-sm focus:outline-none flex items-center">
+                  <button className="mt-8 rounded-full border border-[#D8D8D8] h-[48px] px-8 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 text-sm focus:outline-none flex items-center "
+                  style={{
+                    background: `radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%)`,
+                  }}>
                     Join Now
                   </button>
                 </>
