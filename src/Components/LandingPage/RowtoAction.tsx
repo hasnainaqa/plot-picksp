@@ -30,16 +30,16 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
   {texts.length === 1 ? (
     <div className="absolute inset-0 flex items-center justify-center p-4 sm:p-6">
-      <h3 className="text-2xl font-semibold text-white text-center leading-[150%] ">
+      <h3 className="text-lg sm:text-xl md:text-2xl font-semibold text-white text-center leading-[150%] ">
         {texts[0]}
       </h3>
     </div>
   ) : (
     <div className="absolute inset-0 flex flex-row items-center justify-between p-4 sm:p-6">
-      <h3 className="text-2xl w-1/3 flex items-center justify-center font-semibold text-white text-left leading-[150%]">
+      <h3 className="text-lg sm:text-xl md:text-2xl w-1/3 flex items-center justify-center font-semibold text-white text-left leading-[150%]">
         {texts[0]}
       </h3>
-      <h3 className="text-2xl w-1/2 flex items-center justify-center font-semibold text-white text-right leading-[150%]">
+      <h3 className="text-lg sm:text-xl md:text-2xl w-1/2 flex items-center justify-center font-semibold text-white text-right leading-[150%]">
         {texts[1]}
       </h3>
     </div>
@@ -50,7 +50,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
 const RowtoAction: React.FC = () => {
   return (
-    <section className="w-full text-white px-6 sm:px-8 md:px-12 lg:px-[70px] font-renner flex items-center">
+    <section className="max-w-7xl mx-auto text-white px-6 sm:px-8 md:px-12 lg:px-[70px] font-renner flex items-center">
       <div className="w-full mx-auto">
         <h2 className="text-5xl leading-[150%] font-semibold mb-6 md:mb-10 lg:mb-[51px] text-center lg:text-left">
           Front Row to the Action
@@ -85,7 +85,7 @@ const RowtoAction: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-6 lg:mt-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <FeatureCard
             texts={["Exclusive rewards for founding members"]}
             imageUrl={RowToAction3}
