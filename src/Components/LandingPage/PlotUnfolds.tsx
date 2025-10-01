@@ -1,5 +1,5 @@
 // src/Components/LandingPage/PlotUnfolds.tsx
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Eye, Lightbulb, Trophy, Banknote } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { type LucideIcon } from "lucide-react";
@@ -71,9 +71,18 @@ const tabData: TabData[] = [
 ];
 
 const PlotUnfolds: React.FC = () => {
-  const [activeTab, setActiveTab] = useState<string>(tabData[0].id);
+  const [activeIndex, setActiveIndex] = useState<number>(0);
 
-  const activeContent = tabData.find((tab) => tab.id === activeTab);
+  const activeContent = tabData[activeIndex];
+
+  // Auto-cycle every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % tabData.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
@@ -91,17 +100,17 @@ const PlotUnfolds: React.FC = () => {
         </h2>
 
         <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4 ">
-          {tabData.map((tab) => (
+          {tabData.map((tab, index) => (
             <button
               key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
+              onClick={() => setActiveIndex(index)}
               className={`rounded-full px-[72px] py-[13px] text-base font-medium transition-all duration-300 ease-in-out focus:outline-none sm:text-base ${
-                activeTab === tab.id
+                activeIndex === index
                   ? "bg-gradient-to-b from-blue-500 to-cyan-400 text-white"
                   : `border hover:bg-gray-800 `
               }`}
               style={
-                activeTab === tab.id
+                activeIndex === index
                   ? {}
                   : {
                       background: `radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%)`,
@@ -138,7 +147,7 @@ const PlotUnfolds: React.FC = () => {
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>
-                  <p className="mt-2 font-bold text-base text-white text-start">
+                  <p className="mt-2 font-bold leading-[26px] text-base text-white text-start">
                     {activeContent.tagline}
                   </p>
 
@@ -170,7 +179,7 @@ const PlotUnfolds: React.FC = () => {
         </div>
       </div>
       <div
-        className="absolute top-80 left-48 w-[600px] h-[600px] -z-10 rounded-full"
+        className="absolute top-72 left-52 w-[700px] h-[700px] -z-10 rounded-full"
         style={{
           background: `
       radial-gradient(circle, #230231 0%, transparent 70%)
