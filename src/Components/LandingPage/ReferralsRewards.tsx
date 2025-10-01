@@ -20,26 +20,26 @@ export default function ReferralsRewards() {
         }}
       ></div>
 
-      <div className="max-w-full w-full gap-[100px] items-center flex justify-between">
-        <div className="space-y-4 p-[60px]">
-          <h1 className="text-5xl font-semibold mb-2 text-start">
+      <div className="max-w-full w-full gap-[150px] items-center flex justify-between">
+        <div className="px-[60px]">
+          <h1 className="text-5xl font-semibold mb-[23px] text-start leading-[150%]">
             Referrals + Rewards
           </h1>
 
           {paragraphs.map((text, index) => (
             <p
               key={index}
-              className="text-base leading-[26px] font-normal text-start"
+              className="text-base leading-[26px] font-normal text-start max-w-[700px] mb-4"
             >
               {text}
             </p>
           ))}
-          <div className="flex justify-start">
+          <div className="flex justify-start mt-8 ">
             <Button>Share Your Link</Button>
           </div>
         </div>
 
-        <img src={PP} alt="" className="hidden lg:block" />
+        <img src={PP} alt="" className="h-[507px] w-[562px] hidden lg:block" />
       </div>
     </div>
   );

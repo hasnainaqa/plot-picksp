@@ -5,9 +5,17 @@ const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
 
+  const menuItems = [
+    { label: "Home", href: "#" },
+    { label: "How It Works", href: "#" },
+    { label: "Rewards", href: "#" },
+    { label: "FAQ", href: "#" },
+    { label: "Contact", href: "#" },
+  ];
+
   useEffect(() => {
     const handleScroll = () => {
-      setIsScrolled(window.scrollY > 0); // true if page is scrolled
+      setIsScrolled(window.scrollY > 0);
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
@@ -24,21 +32,15 @@ const Header: React.FC = () => {
       <div className=" mx-auto flex items-center justify-between">
         <img src={Logo} alt="PlotPicks Logo" />
         <nav className="hidden lg:flex items-center space-x-10 text-white font-[400]">
-          <a href="#" className="hover:text-cyan-400 transition">
-            Home
-          </a>
-          <a href="#" className="hover:text-cyan-400 transition">
-            How It Works
-          </a>
-          <a href="#" className="hover:text-cyan-400 transition">
-            Rewards
-          </a>
-          <a href="#" className="hover:text-cyan-400 transition">
-            FAQ
-          </a>
-          <a href="#" className="hover:text-cyan-400 transition">
-            Contact
-          </a>
+          {menuItems.map((item, index) => (
+            <a
+              key={index}
+              href={item.href}
+              className="hover:text-cyan-400 transition"
+            >
+              {item.label}
+            </a>
+          ))}
           <button className="h-[48px] rounded-[32px] px-8 py-[19px] text-[14px] font-semibold leading-[100%] text-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]">
             Join the Waitlist Now
           </button>
@@ -52,21 +54,11 @@ const Header: React.FC = () => {
       </div>
       {isOpen && (
         <div className="lg:hidden mt-4 space-y-3 text-white">
-          <a href="#" className="block">
-            Home
-          </a>
-          <a href="#" className="block">
-            How It Works
-          </a>
-          <a href="#" className="block">
-            Rewards
-          </a>
-          <a href="#" className="block">
-            FAQ
-          </a>
-          <a href="#" className="block">
-            Contact
-          </a>
+          {menuItems.map((item, index) => (
+            <a key={index} href={item.href} className="block">
+              {item.label}
+            </a>
+          ))}
           <button className="w-full bg-gradient-to-r from-[#8E24AA] to-[#000000] px-5 py-2 rounded-full text-sm font-semibold shadow-lg text-center">
             Join the Waitlist Now
           </button>

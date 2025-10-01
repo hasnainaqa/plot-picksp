@@ -79,7 +79,7 @@ const PlotUnfolds: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % tabData.length);
-    }, 8000);
+    }, 80000);
 
     return () => clearInterval(interval);
   }, []);
@@ -95,16 +95,16 @@ const PlotUnfolds: React.FC = () => {
     >
       {/* radial-gradient(circle at top left, #04203d 5%, transparent 40%), */}
       <div className="container mx-auto">
-        <h2 className="mb-12 text-center text-[48px] font-semibold leading-[100%]">
+        <h2 className="mb-[50px] text-center text-[48px] font-semibold leading-[150%]">
           The Plot Unfolds
         </h2>
 
-        <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4 ">
+        <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4">
           {tabData.map((tab, index) => (
             <button
               key={tab.id}
               onClick={() => setActiveIndex(index)}
-              className={`rounded-full px-[72px] py-[13px] text-base font-medium transition-all duration-300 ease-in-out focus:outline-none sm:text-base ${
+              className={`rounded-full px-[72px] h-[50px] text-base font-medium transition-all leading-[150%] duration-300 ease-in-out focus:outline-none sm:text-base ${
                 activeIndex === index
                   ? "bg-gradient-to-b from-blue-500 to-cyan-400 text-white"
                   : `border hover:bg-gray-800 `
@@ -133,7 +133,7 @@ const PlotUnfolds: React.FC = () => {
             <div className="px-12 py-8 items-start">
               {activeContent && (
                 <>
-                  <div className="mb-6 flex items-start gap-4 text-white ">
+                  <div className="mb-6 flex items-center gap-4 text-white ">
                     <activeContent.icon size={24} />
                     <span className="font-medium text-lg text-start">
                       {activeContent.label}
@@ -151,7 +151,7 @@ const PlotUnfolds: React.FC = () => {
                     {activeContent.tagline}
                   </p>
 
-                  <button className="mt-8 rounded-full border  px-8 py-5 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 hover:bg-purple-600/20 focus:outline-none flex justify-start ">
+                  <button className="mt-8 rounded-full border border-[#D8D8D8] h-[48px] px-8 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 text-sm focus:outline-none flex items-center">
                     Join Now
                   </button>
                 </>

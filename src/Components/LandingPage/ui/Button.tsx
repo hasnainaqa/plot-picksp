@@ -34,7 +34,7 @@ const Button: React.FC<ButtonProps> = ({
         className={`
           relative z-10 w-full h-full px-8 py-[19px] 
           font-renner font-semibold text-[14px] leading-[100%] text-center
-          bg-black text-white rounded-[32px] transition-colors duration-300
+          bg-[#030005] text-white rounded-[32px] transition-colors duration-300
           ${className}
         `}
         {...props}
