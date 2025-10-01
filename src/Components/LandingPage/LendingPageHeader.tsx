@@ -1,7 +1,6 @@
 import Logo from "./assets/Logo.svg";
 import React, { useEffect, useState } from "react";
 
-
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
@@ -19,8 +18,7 @@ const Header: React.FC = () => {
       className={`px-[60px] py-[30px] w-full font-renner text-[16px] font-normal fixed left-0 z-50 transition-all duration-300`}
       style={{
         top: isScrolled ? "0px" : "35px",
-        background:
-          "linear-gradient(90deg, rgba(3,0,5,0.1) 0%, #030005 100%)",
+        background: "linear-gradient(90deg, rgba(3,0,5,0.1) 0%, #030005 100%)",
       }}
     >
       <div className=" mx-auto flex items-center justify-between">
@@ -41,7 +39,7 @@ const Header: React.FC = () => {
           <a href="#" className="hover:text-cyan-400 transition">
             Contact
           </a>
-          <button className="bg-gradient-to-b from-[#8E24AA] to-[#000000] px-8 py-[18px] rounded-[32px] text-[14px] font-semibold transition text-center leading-[100%]">
+          <button className="h-[48px] rounded-[32px] px-8 py-[19px] text-[14px] font-semibold leading-[100%] text-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]">
             Join the Waitlist Now
           </button>
         </nav>
@@ -76,5 +74,5 @@ const Header: React.FC = () => {
       )}
     </header>
   );
-}
+};
 export default Header;

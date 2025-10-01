@@ -79,7 +79,7 @@ const PlotUnfolds: React.FC = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % tabData.length);
-    }, 5000);
+    }, 8000);
 
     return () => clearInterval(interval);
   }, []);
