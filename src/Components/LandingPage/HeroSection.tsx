@@ -2,7 +2,7 @@ import Button from "./ui/Button";
 const HeroSection: React.FC = () => {
   return (
     <div
-      className=" pb-[250px]"
+      className="pb-[100px] lg:pb-[250px]"
       style={{
         background: `
       radial-gradient(circle at bottom right, #230231 0%, transparent 25%)
@@ -11,7 +11,7 @@ const HeroSection: React.FC = () => {
     >
       <div className="relative">
         <div
-          className="absolute inset-0 h-[600px] w-[600px] left-0 -top-2 -z-10"
+          className="absolute inset-0 lg:h-[600px] md:h-[380px] md:w-[380px] h-[300px] w-[300px] lg:w-[600px] left-0 -top-2 -z-10"
           style={{
             background: `linear-gradient(46.53deg, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
             opacity: 0.15,
@@ -22,7 +22,7 @@ const HeroSection: React.FC = () => {
       </div>
       {/* <Header /> */}
 
-      <section className="flex items-center justify-center pt-[320px] px-7 text-white font-renner">
+      <section className="flex items-center justify-center lg:pt-[320px] pt-[151px] px-7 text-white font-renner">
         {/* Optional: Subtle gradient glows for a richer background effect */}
 
         <div className="flex flex-col items-center text-center">

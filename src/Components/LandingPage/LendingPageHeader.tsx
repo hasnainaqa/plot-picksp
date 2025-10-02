@@ -23,14 +23,14 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`px-[60px] py-[30px] w-full font-renner text-[16px] font-normal fixed left-0 z-50 transition-all duration-300`}
+      className={`px-[60px] lg:py-[30px] py-4 w-full font-renner text-[16px] font-normal fixed left-0 z-50 transition-all duration-300`}
       style={{
         top: isScrolled ? "0px" : "35px",
         background: "linear-gradient(90deg, rgba(3,0,5,0.1) 0%, #030005 100%)",
       }}
     >
       <div className=" mx-auto flex items-center justify-between">
-        <img src={Logo} alt="PlotPicks Logo" />
+        <img src={Logo} alt="PlotPicks Logo" className="lg:w-auto w-[125px] lg:h-auto h-[21px]" />
         <nav className="hidden lg:flex items-center space-x-10 text-white font-[400]">
           {menuItems.map((item, index) => (
             <a

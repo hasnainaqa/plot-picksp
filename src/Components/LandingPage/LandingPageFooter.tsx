@@ -45,15 +45,20 @@ export default function Footer() {
       // radial-gradient(circle at top left, #051922 0%, transparent 25%)`,
       // }}
     >
-      
       <div className="flex md:flex-row flex-col justify-between  gap-12 mb-16">
-        <div className="flex items-start ml-5">
-          <img src={FooterLogo} alt="Footer Logo" className="lg:w-full w-[100px]" />
+        <div className="flex items-start  md:ml-5 ml-0">
+          <img
+            src={FooterLogo}
+            alt="Footer Logo"
+            className="lg:w-full w-[100px]"
+          />
         </div>
 
         <div className="flex md:flex-row flex-col gap-24 ">
           <div>
-            <h3 className="text-white flex font-semibold text-2xl mb-4">Company</h3>
+            <h3 className="text-white flex font-semibold text-2xl mb-4">
+              Company
+            </h3>
             <ul className="space-y-3">
               {companyLinks.map((item, index) => (
                 <li key={index}>
@@ -69,7 +74,9 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white flex font-semibold text-2xl mb-4">Help</h3>
+            <h3 className="text-white flex font-semibold text-2xl mb-4">
+              Help
+            </h3>
             <ul className="space-y-3">
               {helpLinks.map((item, index) => (
                 <li key={index}>
@@ -105,6 +112,17 @@ export default function Footer() {
 
       <div className="text-center text-[#D1D1D1] text-base font-normal pt-8">
         PlotPicks ©2025. All rights reserved.
+      </div>
+      <div className="relative">
+        <div
+          className="absolute -top-[480px] -right-[400px] h-[500px] w-[500px] -z-10 md:hidden flex"
+          style={{
+            background: `linear-gradient(to top right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
+            opacity: 0.15,
+            boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
+            filter: `blur(100px)`,
+          }}
+        ></div>
       </div>
     </footer>
   );

@@ -2,7 +2,6 @@ import React, { Suspense, lazy, useState, useEffect, useRef } from "react";
 import Header from "../Components/LandingPage/LendingPageHeader";
 import HeroSection from "../Components/LandingPage/HeroSection";
 import Footer from "../Components/LandingPage/LandingPageFooter";
-
 const PlotUnfolds = lazy(() => import("../Components/LandingPage/PlotUnfolds"));
 const RowtoAction = lazy(() => import("../Components/LandingPage/RowtoAction"));
 const ReferralsRewards = lazy(
@@ -12,7 +11,6 @@ const ClaimSpotForm = lazy(
   () => import("../Components/LandingPage/ClaimSpotForm")
 );
 
-// 🌟 Skeleton Loader (Tailwind shimmer effect)
 const SkeletonLoader = ({ height = "h-[300px]" }: { height?: string }) => (
   <div className={`w-full ${height} rounded-xl overflow-hidden relative`}>
     <div className="absolute inset-0  animate-pulse flex items-center justify-center ">
@@ -22,7 +20,6 @@ const SkeletonLoader = ({ height = "h-[300px]" }: { height?: string }) => (
   </div>
 );
 
-// Wrapper for scroll-based lazy load
 function LazyLoadWrapper({
   children,
   fallback,
@@ -39,10 +36,10 @@ function LazyLoadWrapper({
       ([entry]) => {
         if (entry.isIntersecting) {
           setIsVisible(true);
-          observer.disconnect(); // stop observing once loaded
+          observer.disconnect();
         }
       },
-      { rootMargin: "200px" } // preload before visible
+      { rootMargin: "200px" }
     );
     observer.observe(ref.current);
     return () => observer.disconnect();

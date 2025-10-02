@@ -9,7 +9,7 @@ export default function ReferralsRewards() {
   ];
 
   return (
-    <div className="relative py-[174px] text-white flex items-center justify-center font-renner">
+    <div className="relative lg:py-[245px] py-[100px] text-white flex items-center justify-center font-renner">
       <div
         className="absolute top-12 right-0 h-[500px] w-[500px] -z-10"
         style={{
@@ -39,11 +39,11 @@ export default function ReferralsRewards() {
           </div>
         </div>
 
-<img
-  src={PP}
-  alt=""
-  className="h-[507px] w-[562px] absolute -right-40  lg:-right-12 "
-/>
+        <img
+          src={PP}
+          alt=""
+          className="lg:h-[507px] lg:w-[562px] md:h-[432px] md:w-[475px] h-[260px] w-[288px]  absolute -right-40  lg:-right-12 "
+        />
       </div>
     </div>
   );

@@ -75,30 +75,30 @@ const PlotUnfolds: React.FC = () => {
 
   const activeContent = tabData[activeIndex];
 
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setActiveIndex((prev) => (prev + 1) % tabData.length);
-    }, 5000);
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     setActiveIndex((prev) => (prev + 1) % tabData.length);
+  //   }, 5000);
 
-    return () => clearInterval(interval);
-  }, []);
+  //   return () => clearInterval(interval);
+  // }, []);
 
   return (
     <section
-      className="relative text-white mb-[250px] font-renner px-8 "
-      style={{
-        background: `
-        radial-gradient(circle at top right, #230231 0%, transparent 25%)
-        `,
-      }}
+      className="relative text-white lg:mb-[250px] mb-[100px] font-renner px-8 bg-[radial-gradient(circle_at_top_right,#230231_0%,transparent_18%)]
+    lg:bg-[radial-gradient(circle_at_top_right,#230231_0%,transparent_25%)]"
+      // style={{
+      //   background: `
+      //   radial-gradient(circle at top right, #230231 0%, transparent 25%)
+      //   `,
+      // }}
     >
-      {/* radial-gradient(circle at top left, #04203d 5%, transparent 40%), */}
       <div className="container mx-auto">
-        <h2 className="mb-[50px] text-center !leading-[150%] text-white lg:text-5xl text-2xl lg:font-semibold font-bold">
+        <h2 className="lg:mb-[50px] mb-8 text-center !leading-[150%] text-white lg:text-5xl text-2xl lg:font-semibold font-bold">
           The Plot Unfolds
         </h2>
 
-        <div className="mb-8 flex flex-wrap justify-center gap-2 sm:gap-4">
+        <div className="lg:mb-8 mb-6 flex flex-wrap justify-center gap-2 sm:gap-4">
           {tabData.map((tab, index) => (
             <button
               key={tab.id}
