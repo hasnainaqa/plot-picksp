@@ -1,5 +1,7 @@
 import Logo from "./assets/Logo.svg";
 import React, { useEffect, useState } from "react";
+import { Menu, X } from "lucide-react"; // Lucide icons
+import { motion, AnimatePresence } from "framer-motion";
 
 const Header: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,7 +32,11 @@ const Header: React.FC = () => {
       }}
     >
       <div className=" mx-auto flex items-center justify-between">
-        <img src={Logo} alt="PlotPicks Logo" className="lg:w-auto w-[125px] lg:h-auto h-[21px]" />
+        <img
+          src={Logo}
+          alt="PlotPicks Logo"
+          className="lg:w-auto w-[125px] lg:h-auto h-[21px]"
+        />
         <nav className="hidden lg:flex items-center space-x-10 text-white font-[400]">
           {menuItems.map((item, index) => (
             <a
@@ -41,7 +47,7 @@ const Header: React.FC = () => {
               {item.label}
             </a>
           ))}
-          <button className="h-[48px] rounded-[32px] px-8 py-[19px] text-[14px] font-semibold leading-[100%] text-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]">
+          <button className="h-[48px] rounded-[32px] px-8 text-[14px] font-semibold leading-[100%] text-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]">
             Join the Waitlist Now
           </button>
         </nav>
@@ -49,21 +55,47 @@ const Header: React.FC = () => {
           className="lg:hidden text-white"
           onClick={() => setIsOpen(!isOpen)}
         >
-          ☰
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
-      {isOpen && (
-        <div className="lg:hidden mt-4 space-y-3 text-white">
-          {menuItems.map((item, index) => (
-            <a key={index} href={item.href} className="block">
-              {item.label}
-            </a>
-          ))}
-          <button className="w-full bg-gradient-to-r from-[#8E24AA] to-[#000000] px-5 py-2 rounded-full text-sm font-semibold shadow-lg text-center">
-            Join the Waitlist Now
-          </button>
-        </div>
-      )}
+
+<AnimatePresence>
+  {isOpen && (
+    <motion.div
+      initial={{ opacity: 0, y: -10, height: 0 }}
+      animate={{ opacity: 1, y: 0, height: "auto" }}
+      exit={{ opacity: 0, y: -10, height: 0 }}
+      transition={{ duration: 0.35, ease: "easeInOut" }}
+      className="lg:hidden mt-[15px] md:flex justify-end overflow-hidden"
+    >
+      <div className="flex flex-col space-y-4 text-white p-6 rounded-2xl shadow-xl md:px-20
+                      backdrop-blur-md bg-[#030005]/80 border border-white/10">
+        {menuItems.map((item, index) => (
+          <motion.a
+            key={index}
+            href={item.href}
+            initial={{ opacity: 0, y: -5 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: index * 0.05, duration: 0.25 }}
+            className="hover:text-cyan-400 transition-colors duration-200 flex"
+            onClick={() => setIsOpen(false)}
+          >
+            {item.label}
+          </motion.a>
+        ))}
+        <motion.button
+          initial={{ opacity: 0, scale: 0.95 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ delay: menuItems.length * 0.05, duration: 0.3 }}
+          className="h-[48px] rounded-[32px] px-8 text-[14px] font-semibold leading-[100%] text-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]"
+        >
+          Join the Waitlist Now
+        </motion.button>
+      </div>
+    </motion.div>
+  )}
+</AnimatePresence>
+
     </header>
   );
 };

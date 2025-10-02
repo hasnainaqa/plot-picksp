@@ -52,11 +52,11 @@ const RowtoAction: React.FC = () => {
   return (
     <section className="max-w-7xl mx-auto text-white px-8 font-renner flex items-center">
       <div className="w-full mx-auto">
-        <h2 className="text-5xl leading-[150%] font-semibold mb-8 lg:mb-[51px] text-start">
+        <h2 className="lg:text-5xl text-[32px] !leading-[150%] font-semibold mb-8 lg:mb-[51px] text-start">
           Front Row to the Action
         </h2>
 
-        <div className="relative flex flex-col lg:flex-row items-center justify-center gap-6">
+        <div className="relative flex flex-col lg:flex-row items-center justify-center md:gap-6 gap-4">
           <div className="flex-1 w-full block lg:hidden">
             <FeatureCard
               texts={["Early access before public launch"]}
@@ -85,7 +85,7 @@ const RowtoAction: React.FC = () => {
           </div>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:mt-0 mt-6">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:mt-0 md:mt-6 mt-4">
           <FeatureCard
             texts={["Exclusive rewards for founding members"]}
             imageUrl={RowToAction3}

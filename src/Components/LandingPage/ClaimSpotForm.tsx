@@ -46,13 +46,13 @@ export default function ClaimSpotForm() {
               <img
                 src={ClaimSpot}
                 alt="Claim your spot illustration"
+                loading="lazy"
                 className="w-full h-full object-cover rounded-tr-[30px] rounded-bl-[30px]"
               />
             </div>
 
             {/* Right side - Form */}
             <div className="w-full lg:flex-1 flex flex-col items-center lg:items-start px-4 md:px-8 lg:px-0">
-              {/* Top Card */}
               <div
                 className="relative w-full xl:w-auto xl:ml-4 rounded-t-3xl shadow-2xl p-6 pb-0 z-10 lg:min-w-[500px] h-full"
                 style={{
