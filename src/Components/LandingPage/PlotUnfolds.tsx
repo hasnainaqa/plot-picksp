@@ -88,11 +88,6 @@ const PlotUnfolds: React.FC = () => {
     <section
       className="relative text-white lg:mb-[250px] mb-[100px] font-renner px-8 bg-[radial-gradient(circle_at_top_right,#230231_0%,transparent_18%)]
     lg:bg-[radial-gradient(circle_at_top_right,#230231_0%,transparent_25%)]"
-      // style={{
-      //   background: `
-      //   radial-gradient(circle at top right, #230231 0%, transparent 25%)
-      //   `,
-      // }}
     >
       <div className="container mx-auto">
         <h2 className="lg:mb-[50px] mb-8 text-center heading">
@@ -175,7 +170,6 @@ const PlotUnfolds: React.FC = () => {
               )}
             </motion.div>
 
-            {/* Right Column: Image with Transition */}
             <div className="relative md:h-full lg:px-6 lg:py-4 p-4">
               <div className="h-full w-full rounded-2xl overflow-hidden">
                 <AnimatePresence mode="wait">
@@ -196,14 +190,16 @@ const PlotUnfolds: React.FC = () => {
           </div>
         </div>
       </div>
-      <div
-        className="absolute top-72 left-36 w-[700px] h-[700px] -z-10 rounded-full"
-        style={{
-          background: `
-      radial-gradient(circle, #12001A 30%, transparent 70%)
-    `,
-        }}
-      />
+      <div className="relative">
+        <div
+          className="absolute 2xl:-top-96 2xl:left-10 lg:-top-72 lg:-left-40 -top-56 left-0 lg:w-[700px] w-[400px] lg:h-[700px] h-[400px] -z-10 rounded-full"
+          style={{
+            background: `
+          radial-gradient(circle, #12001A 30%, transparent 70%)
+          `,
+          }}
+        />
+      </div>
     </section>
   );
 };
