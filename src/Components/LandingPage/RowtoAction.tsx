@@ -52,7 +52,7 @@ const RowtoAction: React.FC = () => {
   return (
     <section className="max-w-7xl mx-auto text-white px-8 font-renner flex items-center">
       <div className="w-full mx-auto">
-        <h2 className="lg:text-5xl text-[32px] !leading-[150%] font-semibold mb-8 lg:mb-[51px] text-start">
+        <h2 className="lg:text-5xl text-2xl !leading-[150%] font-semibold mb-8 lg:mb-[51px] text-start">
           Front Row to the Action
         </h2>
 
