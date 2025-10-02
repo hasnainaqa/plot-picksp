@@ -39,14 +39,14 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer
-      className="bg-[#03000580] text-white py-10 pt-[123px] lg:px-[60px] md:px-8 px-4 font-renner"
+      className="bg-[#03000580] text-white pb-8 lg:pb-[42px] lg:pt-[121px] pt-[60px] lg:px-[60px] md:px-8 px-4 font-renner"
       // style={{
       //   background: `
       // radial-gradient(circle at top left, #051922 0%, transparent 25%)`,
       // }}
     >
       <div className="flex md:flex-row flex-col md:justify-between lg:items-center md:items-start gap-12 mb-16">
-        <div className="items-center flex justify-center md:ml-5 ml-0">
+        <div className="items-center flex justify-center lg:ml-5 ml-0">
           <img
             src={FooterLogo}
             alt="Footer Logo"
