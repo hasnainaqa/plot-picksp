@@ -1,6 +1,6 @@
 // src/Components/LandingPage/PlotUnfolds.tsx
 import { useState } from "react";
-// import { useEffect } from "react";
+import { useEffect } from "react";
 import { Eye, Lightbulb, Trophy, Banknote } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { type LucideIcon } from "lucide-react";
@@ -73,16 +73,25 @@ const tabData: TabData[] = [
 
 const PlotUnfolds: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
+  const activeContent = tabData[activeIndex]; // define first
+  const [currentImage, setCurrentImage] = useState(activeContent.image);
 
-  const activeContent = tabData[activeIndex];
+useEffect(() => {
 
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     setActiveIndex((prev) => (prev + 1) % tabData.length);
-  //   }, 5000);
+  const img = new Image();
+  img.src = activeContent.image;
+  img.onload = () => {
+    setCurrentImage(activeContent.image);
+  };
+}, [activeContent.image]);
 
-  //   return () => clearInterval(interval);
-  // }, []);
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((prev) => (prev + 1) % tabData.length);
+    }, 5000);
+
+    return () => clearInterval(interval);
+  }, []);
 
   return (
     <section
@@ -174,8 +183,8 @@ const PlotUnfolds: React.FC = () => {
               <div className="h-full w-full rounded-2xl overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
-                    key={activeContent?.image}
-                    src={activeContent?.image}
+                    key={currentImage}
+                    src={currentImage}
                     alt={activeContent?.title}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}

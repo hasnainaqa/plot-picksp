@@ -12,7 +12,6 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <div className="relative inline-block rounded-[32px] p-[1px] overflow-hidden group h-[48px]">
-      {/* Gradient border (hidden on hover) */}
       <div
         className="
           absolute inset-0 rounded-[32px]
@@ -20,16 +19,13 @@ const Button: React.FC<ButtonProps> = ({
           group-hover:hidden animate-spin-slow
         "
       ></div>
-
-      {/* Gray border (visible on hover) */}
       <div
         className="
           absolute inset-0 rounded-[32px] border border-[#D8D8D8]
-          hidden group-hover:block
+          opacity-0 group-hover:opacity-100
+          transition-opacity duration-700 ease-in-out
         "
       ></div>
-
-      {/* Button itself */}
       <button
         className={`
           relative z-10 w-full h-full px-8 
