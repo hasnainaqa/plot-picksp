@@ -1,5 +1,6 @@
 // src/Components/LandingPage/PlotUnfolds.tsx
-import { useState, useEffect } from "react";
+import { useState } from "react";
+// import { useEffect } from "react";
 import { Eye, Lightbulb, Trophy, Banknote } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { type LucideIcon } from "lucide-react";
