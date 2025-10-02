@@ -32,7 +32,7 @@ const Button: React.FC<ButtonProps> = ({
       {/* Button itself */}
       <button
         className={`
-          relative z-10 w-full h-full px-8 py-[19px] 
+          relative z-10 w-full h-full px-8 
           font-renner font-semibold text-[14px] leading-[100%] text-center
           bg-[#030005] text-white rounded-[32px] transition-colors duration-300
           ${className}
