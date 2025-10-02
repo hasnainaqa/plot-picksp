@@ -56,11 +56,11 @@ export default function ClaimSpotForm() {
                   background: `radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(153,153,153,0.1) 100%)`,
                 }}
               >
-                <h2 className="text-white text-4xl font-semibold mb-4 leading-[150%] text-center lg:text-left">
+                <h2 className="text-white lg:text-4xl text-2xl font-semibold mb-4 !leading-[150%] text-center lg:text-left">
                   Claim Your Spot on the Plot
                 </h2>
 
-                <p className="text-base font-normal text-white mb-8 leading-[150%] text-center lg:text-left">
+                <p className="lg:text-base text-sm font-normal text-white mb-8 !leading-[150%] text-center lg:text-left">
                   Be more than a spectator: lock in your place, get early perks, and step into the story before anyone else
                 </p>
 

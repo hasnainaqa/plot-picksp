@@ -22,14 +22,14 @@ const HeroSection: React.FC = () => {
       </div>
       {/* <Header /> */}
 
-      <section className="flex items-center justify-center pt-[320px] text-white font-renner">
+      <section className="flex items-center justify-center pt-[320px] px-7 text-white font-renner">
         {/* Optional: Subtle gradient glows for a richer background effect */}
 
         <div className="flex flex-col items-center text-center">
-          <h1 className="mb-4 font-bold leading-[150%] text-white text-5xl">
+          <h1 className="mb-4 font-bold !leading-[150%] text-white lg:text-5xl text-2xl">
             Join the Future of Entertainment, Reimagined
           </h1>
-          <p className="max-w-2xl mb-8 text-2xl font-normal leading-[150%]">
+          <p className="max-w-2xl mb-8 lg:text-2xl text-base font-normal !leading-[150%]">
             Be the first to experience PlotPicks — the app that lets you predict
             what happens next in your favorite shows and win rewards.
           </p>

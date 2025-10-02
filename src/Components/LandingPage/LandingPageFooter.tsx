@@ -46,12 +46,12 @@ export default function Footer() {
       // }}
     >
       
-      <div className="flex justify-between items-center gap-12 mb-16">
+      <div className="flex md:flex-row flex-col justify-between  gap-12 mb-16">
         <div className="flex items-start ml-5">
-          <img src={FooterLogo} alt="Footer Logo" />
+          <img src={FooterLogo} alt="Footer Logo" className="lg:w-full w-[100px]" />
         </div>
 
-        <div className="flex flex-row gap-24 ">
+        <div className="flex md:flex-row flex-col gap-24 ">
           <div>
             <h3 className="text-white flex font-semibold text-2xl mb-4">Company</h3>
             <ul className="space-y-3">

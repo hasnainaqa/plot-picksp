@@ -75,7 +75,6 @@ const PlotUnfolds: React.FC = () => {
 
   const activeContent = tabData[activeIndex];
 
-  // Auto-cycle every 5 seconds
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((prev) => (prev + 1) % tabData.length);
@@ -86,7 +85,7 @@ const PlotUnfolds: React.FC = () => {
 
   return (
     <section
-      className="relative text-white mb-[250px] font-renner "
+      className="relative text-white mb-[250px] font-renner px-8 "
       style={{
         background: `
         radial-gradient(circle at top right, #230231 0%, transparent 25%)
@@ -95,7 +94,7 @@ const PlotUnfolds: React.FC = () => {
     >
       {/* radial-gradient(circle at top left, #04203d 5%, transparent 40%), */}
       <div className="container mx-auto">
-        <h2 className="mb-[50px] text-center text-[48px] font-semibold leading-[150%]">
+        <h2 className="mb-[50px] text-center !leading-[150%] text-white lg:text-5xl text-2xl lg:font-semibold font-bold">
           The Plot Unfolds
         </h2>
 
@@ -104,7 +103,7 @@ const PlotUnfolds: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveIndex(index)}
-              className={`rounded-full w-[200px] h-[50px] text-base font-medium transition-all leading-[150%] duration-300 ease-in-out focus:outline-none sm:text-base ${
+              className={`rounded-full lg:w-[200px] md:w-[130px] w-[72px] h-[50px] text-base font-medium transition-all leading-[150%] duration-300 ease-in-out focus:outline-none sm:text-base ${
                 activeIndex === index
                   ? "bg-gradient-to-b from-blue-500 to-cyan-400 text-white"
                   : `border hover:bg-gray-800 `
@@ -118,24 +117,27 @@ const PlotUnfolds: React.FC = () => {
                     }
               }
             >
-              {tab.label}
+              <span className="md:hidden flex justify-center">
+                <tab.icon className="w-6 h-6" />
+              </span>{" "}
+              <span className="hidden md:block">{tab.label}</span>{" "}
             </button>
           ))}
         </div>
 
         <div
-          className="md:mx-auto max-w-6xl overflow-hidden rounded-[20px] border border-white/10 bg-black/30 backdrop-blur-sm mx-4"
+          className="mx-auto max-w-[398px] md:max-w-[704px] lg:max-w-6xl overflow-hidden rounded-[20px] border border-white/10 bg-black/30 backdrop-blur-sm"
           style={{
             background: `radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%)`,
           }}
         >
-          <div className="flex md:flex-row flex-col justify-between">
+          <div className="flex lg:flex-row flex-col-reverse justify-between ">
             <motion.div
               initial={{ opacity: 0, x: -50 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: -50 }}
               transition={{ duration: 0.6, ease: "easeOut" }}
-              className="px-12 py-8 items-start"
+              className="lg:px-12 lg:py-8 px-4 py-6 items-start"
             >
               {" "}
               {activeContent && (
@@ -146,10 +148,10 @@ const PlotUnfolds: React.FC = () => {
                       {activeContent.label}
                     </span>
                   </div>
-                  <h3 className="mb-4 font-semibold text-[24px] leading-[100%] text-start">
+                  <h3 className="mb-4 font-semibold lg:text-[24px] text-lg !leading-[150%] text-start">
                     {activeContent.title}
                   </h3>
-                  <div className="space-y-2 font-normal text-base leading-[26px] tracking-[0%] text-start">
+                  <div className="space-y-2 font-normal lg:text-base text-sm !leading-[26px] tracking-[0%] text-start">
                     {activeContent.content.map((paragraph, index) => (
                       <p key={index}>{paragraph}</p>
                     ))}
@@ -173,7 +175,7 @@ const PlotUnfolds: React.FC = () => {
             </motion.div>
 
             {/* Right Column: Image with Transition */}
-            <div className="relative md:h-full md:px-4 md:py-6">
+            <div className="relative md:h-full lg:px-6 lg:py-4 p-4">
               <div className="h-full w-full rounded-2xl overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
@@ -184,7 +186,7 @@ const PlotUnfolds: React.FC = () => {
                     animate={{ opacity: 1 }}
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
-                    className="w-auto lg:min-h-[418px] lg:min-w-[524px] h-full object-cover"
+                    className="lg:min-h-[418px] lg:min-w-[524px] w-full h-full object-cover"
                   />
                 </AnimatePresence>
               </div>
