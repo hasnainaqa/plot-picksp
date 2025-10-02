@@ -39,14 +39,14 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer
-      className="bg-[#03000580] text-white py-10 pt-[123px] px-[60px] font-renner"
+      className="bg-[#03000580] text-white py-10 pt-[123px] lg:px-[60px] md:px-8 px-4 font-renner"
       // style={{
       //   background: `
       // radial-gradient(circle at top left, #051922 0%, transparent 25%)`,
       // }}
     >
-      <div className="flex md:flex-row flex-col justify-between  gap-12 mb-16">
-        <div className="flex items-start  md:ml-5 ml-0">
+      <div className="flex md:flex-row flex-col md:justify-between lg:items-center md:items-start gap-12 mb-16">
+        <div className="items-center flex justify-center md:ml-5 ml-0">
           <img
             src={FooterLogo}
             alt="Footer Logo"
@@ -54,9 +54,9 @@ export default function Footer() {
           />
         </div>
 
-        <div className="flex md:flex-row flex-col gap-24 ">
+        <div className="flex flex-row justify-center lg:gap-[92px] md:gap-[40px] gap-[25px] ">
           <div>
-            <h3 className="text-white flex font-semibold text-2xl mb-4">
+            <h3 className="text-white flex font-semibold text-2xl mb-3">
               Company
             </h3>
             <ul className="space-y-3">
@@ -74,7 +74,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white flex font-semibold text-2xl mb-4">
+            <h3 className="text-white flex font-semibold text-2xl mb-3">
               Help
             </h3>
             <ul className="space-y-3">
@@ -92,7 +92,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold flex text-2xl mb-4">
+            <h3 className="text-white font-semibold flex text-2xl mb-3">
               Follow Us
             </h3>
             <div className="flex gap-4">
@@ -113,7 +113,7 @@ export default function Footer() {
       <div className="text-center text-[#D1D1D1] text-base font-normal pt-8">
         PlotPicks ©2025. All rights reserved.
       </div>
-      <div className="relative">
+      {/* <div className="relative">
         <div
           className="absolute -top-[480px] -right-[400px] h-[500px] w-[500px] -z-10 md:hidden flex"
           style={{
@@ -123,7 +123,7 @@ export default function Footer() {
             filter: `blur(100px)`,
           }}
         ></div>
-      </div>
+      </div> */}
     </footer>
   );
 }

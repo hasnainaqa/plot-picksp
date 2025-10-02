@@ -26,7 +26,7 @@ const HeroSection: React.FC = () => {
         {/* Optional: Subtle gradient glows for a richer background effect */}
 
         <div className="flex flex-col items-center text-center">
-          <h1 className="mb-4 font-bold !leading-[150%] text-white lg:text-5xl text-2xl">
+          <h1 className="mb-4 heading">
             Join the Future of Entertainment, Reimagined
           </h1>
           <p className="max-w-2xl mb-8 lg:text-2xl text-base font-normal !leading-[150%]">

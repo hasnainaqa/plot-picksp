@@ -22,7 +22,7 @@ export default function ReferralsRewards() {
 
       <div className="max-w-7xl w-full items-center flex justify-between">
         <div className="px-8">
-          <h1 className="!leading-[150%] text-white lg:text-5xl text-2xl font-semibold mb-[23px] text-start ">
+          <h1 className="heading mb-[23px] text-start ">
             Referrals + PlotPoint Rewards
           </h1>
 

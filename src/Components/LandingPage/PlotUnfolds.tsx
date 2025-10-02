@@ -95,7 +95,7 @@ const PlotUnfolds: React.FC = () => {
       // }}
     >
       <div className="container mx-auto">
-        <h2 className="lg:mb-[50px] mb-8 text-center !leading-[150%] text-white lg:text-5xl text-2xl lg:font-semibold font-bold">
+        <h2 className="lg:mb-[50px] mb-8 text-center heading">
           The Plot Unfolds
         </h2>
 
