@@ -25,7 +25,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`lg:px-[60px] px-8 lg:py-[30px] py-4 w-full font-renner text-[16px] font-normal fixed left-0 z-50 transition-all duration-300`}
+      className={`lg:px-[60px] md:pl-8 md:pr-4 px-4 lg:py-[30px] py-4 w-full font-renner text-[16px] font-normal fixed left-0 z-50 transition-all duration-300`}
       style={{
         top: isScrolled ? "0px" : "35px",
         background: "linear-gradient(90deg, rgba(3,0,5,0.1) 0%, #030005 100%)",
