@@ -77,7 +77,7 @@ export default function ClaimSpotForm() {
                       {...register("firstName", {
                         required: "First name is required",
                       })}
-                      className="w-full bg-[#464447] text-white placeholder:text-white rounded-xl px-6 lg:py-5 py-[15px] text-sm font-normal focus:outline-none"
+                      className="w-full bg-[#464447] text-white placeholder:text-white rounded-xl px-6 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.firstName && (
                       <p className="absolute left-8 text-red-400 text-sm mt-1">
@@ -93,7 +93,7 @@ export default function ClaimSpotForm() {
                       {...register("lastName", {
                         required: "Last name is required",
                       })}
-                      className="w-full bg-[#464447] text-white placeholder:text-white rounded-xl px-6 lg:py-5 py-[15px] text-sm font-normal focus:outline-none"
+                      className="w-full bg-[#464447] text-white placeholder:text-white rounded-xl px-6 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.lastName && (
                       <p className="absolute  text-red-400 text-sm mt-1">
@@ -106,7 +106,7 @@ export default function ClaimSpotForm() {
 
               {/* Bottom Card */}
               <div
-                className="relative w-full rounded-b-3xl xl:rounded-tl-2xl p-6 sm:p-8 xl:p-5 z-10 flex flex-col md:items-center md:flex-row gap-4 xl:-ml-[120px] xl:min-w-[744px] h-full"
+                className="relative w-full rounded-b-3xl xl:rounded-tl-2xl px-6 pt-4 pb-8 xl:p-5 z-10 flex flex-col md:items-center md:flex-row gap-4 xl:-ml-[120px] xl:min-w-[744px] h-full"
                 style={{
                   background: `radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(153,153,153,0.1) 100%)`,
                 }}
