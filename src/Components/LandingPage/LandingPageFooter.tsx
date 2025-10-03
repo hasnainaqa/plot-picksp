@@ -106,7 +106,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-center text-[#D1D1D1] text-base font-normal pt-8">
+      <div className="text-center lg:text-base text-sm text-[#D1D1D1] font-normal pt-8">
         PlotPicks ©2025. All rights reserved.
       </div>
       {/* <div className="relative">

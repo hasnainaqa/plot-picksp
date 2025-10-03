@@ -11,7 +11,7 @@ export default function ReferralsRewards() {
   return (
     <div className="relative lg:py-[245px] py-[100px] text-white flex items-center justify-center font-renner">
       <div
-        className="absolute top-12 right-0 h-[500px] w-[500px] -z-10"
+        className="absolute top-12 lg:right-0 md:-right-44 -right-72 h-[500px] w-[500px] -z-10"
         style={{
           background: `linear-gradient(to top right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
           opacity: 0.15,
@@ -29,7 +29,7 @@ export default function ReferralsRewards() {
           {paragraphs.map((text, index) => (
             <p
               key={index}
-              className="lg:text-base text-sm !leading-[26px] font-normal text-start max-w-[700px] mb-4"
+              className="lg:text-base text-sm !leading-[26px] font-normal text-start lg:max-w-[700px] md:max-w-[432px] mb-4"
             >
               {text}
             </p>
@@ -42,7 +42,7 @@ export default function ReferralsRewards() {
         <img
           src={PP}
           alt=""
-          className="lg:h-[507px] lg:w-[562px] md:h-[432px] md:w-[475px] h-[260px] w-[288px]  absolute -right-40  lg:-right-12 "
+          className="lg:h-[507px] lg:w-[562px] md:h-[272px] md:w-[301px] h-[260px] w-[288px]  absolute -right-12   "
         />
       </div>
     </div>

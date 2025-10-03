@@ -76,14 +76,13 @@ const PlotUnfolds: React.FC = () => {
   const activeContent = tabData[activeIndex]; // define first
   const [currentImage, setCurrentImage] = useState(activeContent.image);
 
-useEffect(() => {
-
-  const img = new Image();
-  img.src = activeContent.image;
-  img.onload = () => {
-    setCurrentImage(activeContent.image);
-  };
-}, [activeContent.image]);
+  useEffect(() => {
+    const img = new Image();
+    img.src = activeContent.image;
+    img.onload = () => {
+      setCurrentImage(activeContent.image);
+    };
+  }, [activeContent.image]);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -144,7 +143,6 @@ useEffect(() => {
               transition={{ duration: 0.6, ease: "easeOut" }}
               className="lg:px-12 lg:py-8 px-4 py-6 items-start"
             >
-              {" "}
               {activeContent && (
                 <>
                   <div className="mb-6 flex items-center gap-4 text-white ">
@@ -161,7 +159,7 @@ useEffect(() => {
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>
-                  <p className="mt-2 font-bold leading-[26px] text-base text-white text-start">
+                  <p className="mt-2 font-bold !leading-[26px] lg:text-base text-sm text-white text-start">
                     {activeContent.tagline}
                   </p>
 
@@ -179,7 +177,7 @@ useEffect(() => {
               )}
             </motion.div>
 
-            <div className="relative md:h-full lg:px-6 lg:py-4 p-4">
+            <div className="relative object-cover lg:px-6 lg:py-4 p-4">
               <div className="h-full w-full rounded-2xl overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
@@ -191,7 +189,7 @@ useEffect(() => {
                     exit={{ opacity: 0 }}
                     transition={{ duration: 0.4, ease: "easeInOut" }}
                     loading="lazy"
-                    className="lg:min-h-[418px] lg:min-w-[524px] w-full h-full object-cover"
+                    className=" md:h-[301px] lg:min-h-[418px] lg:min-w-[524px] md:min-w-[672px] md:min-h-[301px] h-[418px] w-[366px] object-cover"
                   />
                 </AnimatePresence>
               </div>

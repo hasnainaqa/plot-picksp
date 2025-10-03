@@ -3,7 +3,6 @@ import Header from "../Components/LandingPage/LendingPageHeader";
 import HeroSection from "../Components/LandingPage/HeroSection";
 import Footer from "../Components/LandingPage/LandingPageFooter";
 import {
-  ScaleUp,
   SlideInLeft,
   SlideInRight,
 } from "../Components/Animation/AnimatedSection";
@@ -67,9 +66,9 @@ function LandingPage() {
 
       <LazyLoadWrapper fallback={<SkeletonLoader height="h-[300px]" />}>
         <Suspense fallback={<SkeletonLoader height="h-[300px]" />}>
-          <SlideInLeft>
+          {/* <SlideInLeft> */}
             <RowtoAction />
-          </SlideInLeft>
+          {/* </SlideInLeft> */}
         </Suspense>
       </LazyLoadWrapper>
 
@@ -88,9 +87,7 @@ function LandingPage() {
           </SlideInLeft>
         </Suspense>
       </LazyLoadWrapper>
-      <ScaleUp>
         <Footer />
-      </ScaleUp>
     </>
   );
 }

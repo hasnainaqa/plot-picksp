@@ -29,7 +29,7 @@ const HeroSection: React.FC = () => {
           <h1 className="mb-4 heading">
             Join the Future of Entertainment, Reimagined
           </h1>
-          <p className="max-w-2xl mb-8 lg:text-2xl text-base font-normal !leading-[150%]">
+          <p className="lg:max-w-2xl max-w-lg mb-8 lg:text-2xl text-base font-normal !leading-[150%]">
             Be the first to experience PlotPicks — the app that lets you predict
             what happens next in your favorite shows and win rewards.
           </p>
