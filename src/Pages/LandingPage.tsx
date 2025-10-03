@@ -2,6 +2,11 @@ import React, { Suspense, lazy, useState, useEffect, useRef } from "react";
 import Header from "../Components/LandingPage/LendingPageHeader";
 import HeroSection from "../Components/LandingPage/HeroSection";
 import Footer from "../Components/LandingPage/LandingPageFooter";
+import {
+  ScaleUp,
+  SlideInLeft,
+  SlideInRight,
+} from "../Components/Animation/AnimatedSection";
 const PlotUnfolds = lazy(() => import("../Components/LandingPage/PlotUnfolds"));
 const RowtoAction = lazy(() => import("../Components/LandingPage/RowtoAction"));
 const ReferralsRewards = lazy(
@@ -52,34 +57,40 @@ function LandingPage() {
   return (
     <>
       <Header />
-      <HeroSection />
+      <SlideInRight>
+        <HeroSection />
+      </SlideInRight>
 
-      {/* Each section loads only when scrolled into view */}
-      <LazyLoadWrapper fallback={<SkeletonLoader height="h-[400px]" />}>
-        <Suspense fallback={<SkeletonLoader height="h-[400px]" />}>
-          <PlotUnfolds />
-        </Suspense>
-      </LazyLoadWrapper>
+      <SlideInRight>
+        <PlotUnfolds />
+      </SlideInRight>
 
       <LazyLoadWrapper fallback={<SkeletonLoader height="h-[300px]" />}>
         <Suspense fallback={<SkeletonLoader height="h-[300px]" />}>
-          <RowtoAction />
+          <SlideInLeft>
+            <RowtoAction />
+          </SlideInLeft>
         </Suspense>
       </LazyLoadWrapper>
 
       <LazyLoadWrapper fallback={<SkeletonLoader height="h-[350px]" />}>
         <Suspense fallback={<SkeletonLoader height="h-[350px]" />}>
-          <ReferralsRewards />
+          <SlideInRight>
+            <ReferralsRewards />
+          </SlideInRight>
         </Suspense>
       </LazyLoadWrapper>
 
       <LazyLoadWrapper fallback={<SkeletonLoader height="h-[400px]" />}>
         <Suspense fallback={<SkeletonLoader height="h-[400px]" />}>
-          <ClaimSpotForm />
+          <SlideInLeft>
+            <ClaimSpotForm />
+          </SlideInLeft>
         </Suspense>
       </LazyLoadWrapper>
-
-      <Footer />
+      <ScaleUp>
+        <Footer />
+      </ScaleUp>
     </>
   );
 }
