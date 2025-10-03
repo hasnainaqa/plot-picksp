@@ -66,9 +66,9 @@ function LandingPage() {
 
       <LazyLoadWrapper fallback={<SkeletonLoader height="h-[300px]" />}>
         <Suspense fallback={<SkeletonLoader height="h-[300px]" />}>
-          {/* <SlideInLeft> */}
+          <SlideInLeft>
             <RowtoAction />
-          {/* </SlideInLeft> */}
+          </SlideInLeft>
         </Suspense>
       </LazyLoadWrapper>
 

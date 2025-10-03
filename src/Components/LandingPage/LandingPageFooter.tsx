@@ -38,57 +38,57 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer
-      className="bg-[#03000580] text-white pb-8 lg:pb-[42px] lg:pt-[121px] pt-[60px] lg:px-[60px] md:px-8 px-4 font-renner"
-    >
-      <div className="flex md:flex-row flex-col md:justify-between lg:items-center md:items-start gap-12 mb-16">
+    <footer className="bg-[#03000580] text-white pb-8 lg:pb-[42px] lg:pt-[121px] pt-[60px] lg:px-[60px] md:px-8 px-4 font-renner">
+      <div className="flex md:flex-row flex-col md:justify-between lg:items-center md:items-start gap-12">
         <div className="items-center flex justify-center lg:ml-5 ml-0">
           <img
             src={FooterLogo}
             alt="Footer Logo"
-            className="lg:w-full w-[100px]"
+            className="lg:w-[141px] w-[100px]"
           />
         </div>
 
         <div className="flex flex-row justify-center lg:gap-[92px] md:gap-[40px] gap-[25px] ">
-          <div>
-            <h3 className="text-white flex font-semibold text-2xl mb-3">
-              Company
-            </h3>
-            <ul className="space-y-3">
-              {companyLinks.map((item, index) => (
-                <li key={index}>
-                  <a
-                    href={item.href}
-                    className="text-[#D1D1D1] flex font-normal text-base hover:text-white transition-colors"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+        <div className="flex flex-row-reverse lg:flex-row justify-center lg:gap-[92px] md:gap-[40px] gap-[25px] ">
+            <div>
+              <h3 className="text-white flex font-semibold leading-[150%] text-2xl mb-3">
+                Company
+              </h3>
+              <ul className="space-y-2">
+                {companyLinks.map((item, index) => (
+                  <li key={index}>
+                    <a
+                      href={item.href}
+                      className="text-[#D1D1D1] flex font-normal text-base leading-[150%] hover:text-white transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+
+            <div>
+              <h3 className="text-white flex font-semibold leading-[150%] text-2xl mb-3">
+                Help
+              </h3>
+              <ul className="space-y-2">
+                {helpLinks.map((item, index) => (
+                  <li key={index}>
+                    <a
+                      href={item.href}
+                      className="text-[#D1D1D1] flex font-normal text-base leading-[150%] hover:text-white transition-colors"
+                    >
+                      {item.label}
+                    </a>
+                  </li>
+                ))}
+              </ul>
+            </div>
           </div>
 
           <div>
-            <h3 className="text-white flex font-semibold text-2xl mb-3">
-              Help
-            </h3>
-            <ul className="space-y-3">
-              {helpLinks.map((item, index) => (
-                <li key={index}>
-                  <a
-                    href={item.href}
-                    className="text-[#D1D1D1] flex font-normal text-base hover:text-white transition-colors"
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-white font-semibold flex text-2xl mb-3">
+            <h3 className="text-white font-semibold leading-[150%] flex text-2xl mb-3">
               Follow Us
             </h3>
             <div className="flex gap-4">
@@ -106,7 +106,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-center lg:text-base text-sm text-[#D1D1D1] font-normal pt-8">
+      <div className="text-center lg:text-base text-sm text-[#D1D1D1] font-normal lg:pt-[97px] !leading-[150%] pt-12">
         PlotPicks ©2025. All rights reserved.
       </div>
       {/* <div className="relative">
