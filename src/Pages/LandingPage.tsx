@@ -94,9 +94,6 @@
 
 // export default LandingPage;
 
-
-
-
 import Header from "../Components/LandingPage/LendingPageHeader";
 import HeroSection from "../Components/LandingPage/HeroSection";
 import Footer from "../Components/LandingPage/LandingPageFooter";
@@ -108,30 +105,32 @@ import PlotUnfolds from "../Components/LandingPage/PlotUnfolds";
 import RowtoAction from "../Components/LandingPage/RowtoAction";
 import ReferralsRewards from "../Components/LandingPage/ReferralsRewards";
 import ClaimSpotForm from "../Components/LandingPage/ClaimSpotForm";
+import AnimateOnLg from "../Components/Animation/AnimateOnLg";
 
 function LandingPage() {
   return (
     <>
       <Header />
-      <SlideInRight>
+
+      <AnimateOnLg Animation={SlideInRight}>
         <HeroSection />
-      </SlideInRight>
+      </AnimateOnLg>
 
-      <SlideInRight>
+      <AnimateOnLg Animation={SlideInRight}>
         <PlotUnfolds />
-      </SlideInRight>
+      </AnimateOnLg>
 
-      <SlideInLeft>
+      <AnimateOnLg Animation={SlideInLeft}>
         <RowtoAction />
-      </SlideInLeft>
+      </AnimateOnLg>
 
-      <SlideInRight>
+      <AnimateOnLg Animation={SlideInRight}>
         <ReferralsRewards />
-      </SlideInRight>
+      </AnimateOnLg>
 
-      <SlideInLeft>
+      <AnimateOnLg Animation={SlideInLeft}>
         <ClaimSpotForm />
-      </SlideInLeft>
+      </AnimateOnLg>
 
       <Footer />
     </>

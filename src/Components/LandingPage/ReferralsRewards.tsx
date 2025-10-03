@@ -42,7 +42,7 @@ export default function ReferralsRewards() {
         <img
           src={PP}
           alt=""
-          className="lg:h-[507px] lg:w-[562px] md:h-[272px] md:w-[301px] h-[260px] w-[288px]  absolute -right-12   "
+          className="lg:h-[507px] lg:w-[562px] md:h-[272px] md:w-[301px] h-[260px] w-[288px]  absolute md:-right-12 -right-[105px]  "
         />
       </div>
     </div>

@@ -30,7 +30,7 @@ const HeroSection: React.FC = () => {
             Join the Future of Entertainment, Reimagined
           </h1>
           <p className="lg:max-w-[724px] md:max-w-lg max-w-sm mb-8 lg:text-2xl text-base font-normal !leading-[150%]">
-            Be the first to experience PlotPicks — the app that lets you predict
+            Be the first to experience PlotPicks the app that lets you predict
             what happens next in your favorite shows and win rewards.
           </p>
           <Button className="">Join Now</Button>
