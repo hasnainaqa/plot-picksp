@@ -77,7 +77,7 @@ export default function Footer() {
                   <li key={index}>
                     <a
                       href={item.href}
-                      className="text-[#D1D1D1] flex font-normal text-base leading-[150%] hover:text-white transition-colors"
+                      className="text-[#D1D1D1] block text-start font-normal text-base leading-[150%] hover:text-white transition-colors"
                     >
                       {item.label}
                     </a>
