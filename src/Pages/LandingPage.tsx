@@ -109,15 +109,14 @@ import AnimateOnLg from "../Components/Animation/AnimateOnLg";
 
 function LandingPage() {
   return (
-    <>
+<>
       <Header />
 
       <AnimateOnLg Animation={SlideInRight}>
-        <>
-          <HeroSection />
-          <PlotUnfolds />
-        </>
+        <HeroSection />
       </AnimateOnLg>
+    <div className="md:px-8 px-4">
+        <PlotUnfolds />
 
       <AnimateOnLg Animation={SlideInLeft}>
         <RowtoAction />
@@ -130,9 +129,10 @@ function LandingPage() {
       <AnimateOnLg Animation={SlideInLeft}>
         <ClaimSpotForm />
       </AnimateOnLg>
+    </div>
 
       <Footer />
-    </>
+</>
   );
 }
 

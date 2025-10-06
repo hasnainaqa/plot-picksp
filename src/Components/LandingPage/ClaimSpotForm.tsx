@@ -20,7 +20,7 @@ export default function ClaimSpotForm() {
   };
 
   return (
-    <div className="lg:pb-[250px] pb-[100px] px-4 flex items-center justify-center font-renner">
+    <div className="lg:pb-[250px] pb-[100px] flex items-center justify-center font-renner">
       {/* Background Gradient Glow */}
       <div className="relative">
         <div

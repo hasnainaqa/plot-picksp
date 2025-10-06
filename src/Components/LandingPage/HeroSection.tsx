@@ -3,12 +3,28 @@ const HeroSection: React.FC = () => {
   return (
     <div
       className="pb-[100px] lg:pb-[250px]"
-      style={{
-        background: `
-      radial-gradient(circle at bottom right, #230231 0%, transparent 25%)
-    `,
-      }}
+      //   style={{
+      //     background: `
+      //   radial-gradient(circle at bottom right, #230231 0%, transparent 25%)
+      // `,
+      //   }}
     >
+      <div className="relative">
+        <div
+          className="
+      absolute 
+      top-40 -right-20
+      translate-x-1/3 translate-y-1/3
+      lg:w-[800px] w-[400px] md:w-[600px] 
+      lg:h-[800px] h-[400px] md:h-[600px]
+      -z-10 rounded-full
+    "
+          style={{
+            background: `radial-gradient(circle, #12001A 30%, transparent 70%)`,
+          }}
+        />
+      </div>
+
       <div className="relative">
         <div
           className="absolute inset-0 lg:h-[600px] md:h-[380px] md:w-[380px] h-[300px] w-[300px] lg:w-[600px] left-0 -top-2 -z-10"
