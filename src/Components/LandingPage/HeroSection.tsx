@@ -13,7 +13,7 @@ const HeroSection: React.FC = () => {
         <div
           className="
       absolute 
-      top-40 -right-20
+      lg:top-40 top-48 md:top-0 -right-20
       translate-x-1/3 translate-y-1/3
       lg:w-[800px] w-[400px] md:w-[600px] 
       lg:h-[800px] h-[400px] md:h-[600px]
