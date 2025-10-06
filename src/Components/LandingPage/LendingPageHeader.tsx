@@ -8,10 +8,8 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const menuItems = [
-    { label: "Home", href: "#home" },
     { label: "How It Works", href: "#how-it-works" },
     { label: "Rewards", href: "#rewards" },
-    { label: "FAQ", href: "#faq" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -39,15 +37,26 @@ const Header: React.FC = () => {
         />
         <nav className="hidden lg:flex items-center space-x-10 text-white font-[400]">
           {menuItems.map((item, index) => (
-            <a
+            <button
               key={index}
-              href={item.href}
-              className="hover:text-cyan-400 transition"
+              onClick={() => {
+                const section = document.querySelector(item.href);
+                section?.scrollIntoView({ behavior: "smooth", block: "start" });
+                setIsOpen(false);
+              }}
+              className="hover:text-cyan-400 transition bg-transparent border-none text-white font-normal"
             >
               {item.label}
-            </a>
+            </button>
           ))}
-          <button className="h-[48px] rounded-[32px] px-8 text-[14px] font-semibold leading-[100%] text-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]">
+
+          <button
+            onClick={() => {
+              const contact = document.querySelector("#contact");
+              contact?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            className="h-[48px] rounded-[32px] px-8 text-[14px] font-semibold leading-[100%] text-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]"
+          >
             Join the Waitlist Now
           </button>
         </nav>
@@ -85,14 +94,15 @@ const Header: React.FC = () => {
                   {item.label}
                 </motion.a>
               ))}
-              <motion.button
+              <motion.a
                 initial={{ opacity: 0, scale: 0.95 }}
+                href="#contact"
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: menuItems.length * 0.05, duration: 0.3 }}
-                className="h-[48px] rounded-[32px] px-8 text-[14px] font-semibold leading-[100%] text-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]"
+                className="h-[48px] rounded-[32px] px-8 text-[14px] font-semibold leading-[100%] text-center flex items-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]"
               >
                 Join the Waitlist Now
-              </motion.button>
+              </motion.a>
             </div>
           </motion.div>
         )}

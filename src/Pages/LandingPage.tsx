@@ -112,11 +112,9 @@ function LandingPage() {
       <Header />
 
       {/* HERO SECTION */}
-      <section id="home">
         <AnimateOnLg Animation={SlideInRight}>
           <HeroSection />
         </AnimateOnLg>
-      </section>
 
       <div className="md:px-8 px-4">
         {/* HOW IT WORKS */}
@@ -132,11 +130,9 @@ function LandingPage() {
         </section>
 
         {/* REFERRALS */}
-        <section id="faq">
           <AnimateOnLg Animation={SlideInRight}>
             <ReferralsRewards />
           </AnimateOnLg>
-        </section>
 
         {/* CLAIM FORM */}
         <section id="contact">

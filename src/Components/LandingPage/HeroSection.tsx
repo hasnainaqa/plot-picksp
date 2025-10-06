@@ -2,7 +2,7 @@ import Button from "./ui/Button";
 const HeroSection: React.FC = () => {
   return (
     <div
-      className="pb-[100px] lg:pb-[250px]"
+      className=""
       //   style={{
       //     background: `
       //   radial-gradient(circle at bottom right, #230231 0%, transparent 25%)
