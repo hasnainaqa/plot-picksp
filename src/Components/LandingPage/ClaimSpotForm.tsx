@@ -96,7 +96,7 @@ export default function ClaimSpotForm() {
                       className="w-full bg-[#464447] text-white placeholder:text-white rounded-xl px-6 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.lastName && (
-                      <p className="absolute  text-red-400 text-sm mt-1">
+                      <p className="absolute -bottom-[18px] ml-2 text-red-400 text-sm mt-1">
                         {errors.lastName.message}
                       </p>
                     )}
@@ -143,7 +143,6 @@ export default function ClaimSpotForm() {
                     Join Now
                   </span>
                 </button>
-                
               </div>
             </div>
           </form>
