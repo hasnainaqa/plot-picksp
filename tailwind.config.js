@@ -12,7 +12,7 @@ module.exports = {
         renner: ["Renner", "sans-serif"],
       },
       animation: {
-        "spin-slow": "spin 1s linear infinite",
+        "spin-slow": "spin 2.5s linear infinite",
       },
     },
     fontSize: {

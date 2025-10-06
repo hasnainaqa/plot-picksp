@@ -66,7 +66,7 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, y: 0, height: "auto" }}
             exit={{ opacity: 0, y: -10, height: 0 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="lg:hidden mt-[15px] md:flex justify-end overflow-hidden"
+            className="lg:hidden mt-3 md:flex justify-end overflow-hidden"
           >
             <div
               className="flex flex-col space-y-4 text-white p-6 rounded-2xl shadow-xl md:px-20

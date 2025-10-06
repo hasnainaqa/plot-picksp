@@ -199,7 +199,7 @@ const PlotUnfolds: React.FC = () => {
       </div>
       <div className="relative">
         <div
-          className="absolute 2xl:-top-96 2xl:left-10 lg:-top-72 lg:-left-40 -top-56 left-0 lg:w-[700px] w-[400px] lg:h-[700px] h-[400px] -z-10 rounded-full"
+          className="absolute 2xl:-top-96 2xl:left-10 lg:-top-72 lg:-left-40 -top-56 md:-left-48 md:-top-72 -left-20 md:w-[700px] w-[400px] lg:h-[700px] h-[400px] -z-10 rounded-full"
           style={{
             background: `
           radial-gradient(circle, #12001A 30%, transparent 70%)
