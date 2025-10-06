@@ -113,11 +113,10 @@ function LandingPage() {
       <Header />
 
       <AnimateOnLg Animation={SlideInRight}>
-        <HeroSection />
-      </AnimateOnLg>
-
-      <AnimateOnLg Animation={SlideInRight}>
-        <PlotUnfolds />
+        <>
+          <HeroSection />
+          <PlotUnfolds />
+        </>
       </AnimateOnLg>
 
       <AnimateOnLg Animation={SlideInLeft}>
