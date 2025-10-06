@@ -11,7 +11,7 @@ function AnimateOnLg({
 
   useEffect(() => {
     const handleResize = () => {
-      setIsLg(window.innerWidth >= 1024); 
+      setIsLg(window.innerWidth >= 1024);
     };
 
     handleResize();

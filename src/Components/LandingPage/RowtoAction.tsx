@@ -1,9 +1,9 @@
 import React from "react";
-import RowToAction1 from "./assets/RowToAction1.svg";
-import RowToAction2_o from "./assets/RowToAction2_o.svg";
-import RowToAction2in1 from "./assets/RowToAction2in1.svg";
-import RowToAction3 from "./assets/RowToAction3.svg";
-import RowToAction4 from "./assets/RowToAction4.svg";
+import RowToAction1 from "./LandingPageAssets/RowToAction1.svg";
+import RowToAction2_o from "./LandingPageAssets/RowToAction2_o.svg";
+import RowToAction2in1 from "./LandingPageAssets/RowToAction2in1.svg";
+import RowToAction3 from "./LandingPageAssets/RowToAction3.svg";
+import RowToAction4 from "./LandingPageAssets/RowToAction4.svg";
 
 type Feature = {
   texts: string[]; // allow multiple texts
@@ -19,32 +19,32 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
   cornerStyle = "",
 }) => {
   return (
-<div
-  className={`relative overflow-hidden group rounded-[30px] ${cornerStyle}`}
->
-  <img
-    src={imageUrl}
-    alt="feature"
-    className="w-full lg:h-auto md:h-[180px] h-[160px] object-cover"
-  />
+    <div
+      className={`relative overflow-hidden group rounded-[30px] ${cornerStyle}`}
+    >
+      <img
+        src={imageUrl}
+        alt="feature"
+        className="w-full lg:h-auto md:h-[180px] h-[160px] object-cover"
+      />
 
-  {texts.length === 1 ? (
-    <div className="absolute inset-0 flex items-center lg:justify-center p-4 sm:p-6">
-      <h3 className="text-lg text-start lg:text-2xl font-semibold text-white md:text-center leading-[150%] ">
-        {texts[0]}
-      </h3>
+      {texts.length === 1 ? (
+        <div className="absolute inset-0 flex items-center lg:justify-center p-4 sm:p-6">
+          <h3 className="text-lg text-start lg:text-2xl font-semibold text-white md:text-center leading-[150%] ">
+            {texts[0]}
+          </h3>
+        </div>
+      ) : (
+        <div className="absolute inset-0 flex flex-row items-center justify-between p-4 sm:p-6">
+          <h3 className="text-lg lg:text-2xl w-1/3 flex items-center justify-center font-semibold text-white text-left leading-[150%]">
+            {texts[0]}
+          </h3>
+          <h3 className="text-lg lg:text-2xl w-1/2 flex items-center justify-center font-semibold text-white text-right leading-[150%]">
+            {texts[1]}
+          </h3>
+        </div>
+      )}
     </div>
-  ) : (
-    <div className="absolute inset-0 flex flex-row items-center justify-between p-4 sm:p-6">
-      <h3 className="text-lg lg:text-2xl w-1/3 flex items-center justify-center font-semibold text-white text-left leading-[150%]">
-        {texts[0]}
-      </h3>
-      <h3 className="text-lg lg:text-2xl w-1/2 flex items-center justify-center font-semibold text-white text-right leading-[150%]">
-        {texts[1]}
-      </h3>
-    </div>
-  )}
-</div>
   );
 };
 
@@ -105,11 +105,11 @@ const RowtoAction: React.FC = () => {
 export default RowtoAction;
 
 // import React from "react";
-// import RowToAction1 from "./assets/RowToAction1.svg";
-// import RowToAction2_o from "./assets/RowToAction2_o.svg";
-// import RowToAction2in1 from "./assets/RowToAction2in1.svg";
-// import RowToAction3 from "./assets/RowToAction3.svg";
-// import RowToAction4 from "./assets/RowToAction4.svg";
+// import RowToAction1 from "./LandingPageAssets/RowToAction1.svg";
+// import RowToAction2_o from "./LandingPageAssets/RowToAction2_o.svg";
+// import RowToAction2in1 from "./LandingPageAssets/RowToAction2in1.svg";
+// import RowToAction3 from "./LandingPageAssets/RowToAction3.svg";
+// import RowToAction4 from "./LandingPageAssets/RowToAction4.svg";
 
 // type Feature = {
 //   texts: string[]; // allow multiple texts
@@ -205,6 +205,5 @@ export default RowtoAction;
 // </section>
 //   );
 // };
-
 
 // export default RowtoAction;

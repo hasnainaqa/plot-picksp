@@ -1,4 +1,4 @@
-import PP from "./assets/PP.svg";
+import PP from "./LandingPageAssets/PP.svg";
 import Button from "./ui/Button";
 
 export default function ReferralsRewards() {

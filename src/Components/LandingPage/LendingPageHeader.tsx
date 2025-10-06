@@ -1,4 +1,4 @@
-import Logo from "./assets/Logo.svg";
+import Logo from "../assets/Logo.svg";
 import React, { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react"; // Lucide icons
 import { motion, AnimatePresence } from "framer-motion";
@@ -8,11 +8,11 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
 
   const menuItems = [
-    { label: "Home", href: "#" },
-    { label: "How It Works", href: "#" },
-    { label: "Rewards", href: "#" },
-    { label: "FAQ", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Home", href: "#home" },
+    { label: "How It Works", href: "#how-it-works" },
+    { label: "Rewards", href: "#rewards" },
+    { label: "FAQ", href: "#faq" },
+    { label: "Contact", href: "#contact" },
   ];
 
   useEffect(() => {

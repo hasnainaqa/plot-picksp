@@ -12,7 +12,8 @@ const Button: React.FC<ButtonProps> = ({
 }) => {
   return (
     <div className="relative inline-block rounded-[32px] p-[1px] overflow-hidden group h-[48px]">
-      <div className="
+      <div
+        className="
       absolute inset-0 rounded-[32px] [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]  animate-spin-slow group-hover:animate-none
       "
       ></div>

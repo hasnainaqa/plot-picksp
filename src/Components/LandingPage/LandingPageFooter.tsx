@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react";
-import FooterLogo from "./assets/FooterLogo.svg";
+import FooterLogo from "./LandingPageAssets/FooterLogo.svg";
 
 const companyLinks = [
   { label: "About", href: "#" },
@@ -49,7 +49,7 @@ export default function Footer() {
         </div>
 
         <div className="flex flex-row justify-center lg:gap-[92px] md:gap-[40px] gap-[25px] ">
-        <div className="flex flex-row-reverse lg:flex-row justify-center lg:gap-[92px] md:gap-[40px] gap-[25px] ">
+          <div className="flex flex-row-reverse lg:flex-row justify-center lg:gap-[92px] md:gap-[40px] gap-[25px] ">
             <div>
               <h3 className="text-white flex font-semibold leading-[150%] text-2xl mb-3">
                 Company

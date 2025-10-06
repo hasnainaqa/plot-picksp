@@ -93,7 +93,6 @@
 // }
 
 // export default LandingPage;
-
 import Header from "../Components/LandingPage/LendingPageHeader";
 import HeroSection from "../Components/LandingPage/HeroSection";
 import Footer from "../Components/LandingPage/LandingPageFooter";
@@ -109,30 +108,46 @@ import AnimateOnLg from "../Components/Animation/AnimateOnLg";
 
 function LandingPage() {
   return (
-<>
+    <>
       <Header />
 
-      <AnimateOnLg Animation={SlideInRight}>
-        <HeroSection />
-      </AnimateOnLg>
-    <div className="md:px-8 px-4">
-        <PlotUnfolds />
+      {/* HERO SECTION */}
+      <section id="home">
+        <AnimateOnLg Animation={SlideInRight}>
+          <HeroSection />
+        </AnimateOnLg>
+      </section>
 
-      <AnimateOnLg Animation={SlideInLeft}>
-        <RowtoAction />
-      </AnimateOnLg>
+      <div className="md:px-8 px-4">
+        {/* HOW IT WORKS */}
+        <section id="how-it-works">
+          <PlotUnfolds />
+        </section>
 
-      <AnimateOnLg Animation={SlideInRight}>
-        <ReferralsRewards />
-      </AnimateOnLg>
+        {/* ROW TO ACTION */}
+        <section id="rewards">
+          <AnimateOnLg Animation={SlideInLeft}>
+            <RowtoAction />
+          </AnimateOnLg>
+        </section>
 
-      <AnimateOnLg Animation={SlideInLeft}>
-        <ClaimSpotForm />
-      </AnimateOnLg>
-    </div>
+        {/* REFERRALS */}
+        <section id="faq">
+          <AnimateOnLg Animation={SlideInRight}>
+            <ReferralsRewards />
+          </AnimateOnLg>
+        </section>
+
+        {/* CLAIM FORM */}
+        <section id="contact">
+          <AnimateOnLg Animation={SlideInLeft}>
+            <ClaimSpotForm />
+          </AnimateOnLg>
+        </section>
+      </div>
 
       <Footer />
-</>
+    </>
   );
 }
 
