@@ -63,21 +63,11 @@ body {
 .gradient-radial-purple {
   background: radial-gradient(circle, #230231 0%, transparent 25%);
 }
+@keyframes move-border {
+  0%   { clip-path: inset(95% 0 0 0); }   /* left edge */
+  25%  { clip-path: inset(0 95% 0 0); }   /* top edge */
+  50%  { clip-path: inset(0 0 95% 0); }   /* right edge */
+  75%  { clip-path: inset(0 0 0 95%); }   /* bottom edge */
+  100% { clip-path: inset(95% 0 0 0); }   /* back to left */
+}
 
-    @keyframes move-border {
-      0% {
-        clip-path: inset(0 80% 0 0 round 32px); /* left */
-      }
-      25% {
-        clip-path: inset(0 0 80% 0 round 32px); /* top */
-      }
-      50% {
-        clip-path: inset(0 0 0 80% round 32px); /* right */
-      }
-      75% {
-        clip-path: inset(80% 0 0 0 round 32px); /* bottom */
-      }
-      100% {
-        clip-path: inset(0 80% 0 0 round 32px); /* back to left */
-      }
-    }
