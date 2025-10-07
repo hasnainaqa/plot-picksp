@@ -1,6 +1,6 @@
 import Logo from "../assets/Logo.svg";
 import React, { useEffect, useState } from "react";
-import { Menu, X } from "lucide-react"; // Lucide icons
+import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const Header: React.FC = () => {
@@ -23,7 +23,7 @@ const Header: React.FC = () => {
 
   return (
     <header
-      className={`lg:px-[60px] md:pl-8 md:pr-4 px-4 lg:py-[30px] py-4 w-full font-renner text-[16px] font-normal fixed left-0 z-50 transition-all duration-300`}
+      className={`lg:px-[60px] md:pl-8 md:pr-4 px-4 lg:py-[30px] py-4 w-full font-renner text-[16px] font-normal fixed left-0 z-50 transition-all duration-300 text-[var(--primarytext)]`}
       style={{
         top: isScrolled ? "0px" : "35px",
         background: "linear-gradient(90deg, rgba(3,0,5,0.1) 0%, #030005 100%)",
@@ -35,7 +35,7 @@ const Header: React.FC = () => {
           alt="PlotPicks Logo"
           className="lg:w-[221px] w-[125px] lg:h-[37px] h-[21px]"
         />
-        <nav className="hidden lg:flex items-center space-x-10 text-white font-[400]">
+        <nav className="hidden lg:flex items-center space-x-10 font-[400]">
           {menuItems.map((item, index) => (
             <button
               key={index}
@@ -44,7 +44,7 @@ const Header: React.FC = () => {
                 section?.scrollIntoView({ behavior: "smooth", block: "start" });
                 setIsOpen(false);
               }}
-              className="hover:text-cyan-400 transition bg-transparent border-none text-white font-normal"
+              className="bg-transparent border-none font-normal"
             >
               {item.label}
             </button>
@@ -60,10 +60,7 @@ const Header: React.FC = () => {
             Join the Waitlist Now
           </button>
         </nav>
-        <button
-          className="lg:hidden text-white"
-          onClick={() => setIsOpen(!isOpen)}
-        >
+        <button className="lg:hidden" onClick={() => setIsOpen(!isOpen)}>
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
@@ -77,10 +74,7 @@ const Header: React.FC = () => {
             transition={{ duration: 0.35, ease: "easeInOut" }}
             className="lg:hidden mt-3 md:flex justify-end overflow-hidden"
           >
-            <div
-              className="flex flex-col space-y-4 text-white p-6 rounded-2xl shadow-xl md:px-20
-                      backdrop-blur-md bg-[#030005]/80 border border-white/10"
-            >
+            <div className="flex flex-col space-y-4 p-6 rounded-2xl shadow-xl md:px-20 backdrop-blur-md bg-[#030005]/80 border border-white/10">
               {menuItems.map((item, index) => (
                 <motion.a
                   key={index}

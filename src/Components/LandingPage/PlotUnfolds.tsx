@@ -73,7 +73,7 @@ const tabData: TabData[] = [
 
 const PlotUnfolds: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const activeContent = tabData[activeIndex]; // define first
+  const activeContent = tabData[activeIndex]; 
   const [currentImage, setCurrentImage] = useState(activeContent.image);
 
   useEffect(() => {
@@ -93,9 +93,7 @@ const PlotUnfolds: React.FC = () => {
   // }, []);
 
   return (
-    <section
-      className="relative text-white font-renner pt-[100px] lg:pt-[250px] "
-    >
+    <section className="relative  font-renner pt-[100px] lg:pt-[250px] ">
       <div className="container mx-auto">
         <h2 className="lg:mb-[50px] mb-8 text-center heading">
           The Plot Unfolds
@@ -106,10 +104,10 @@ const PlotUnfolds: React.FC = () => {
             <button
               key={tab.id}
               onClick={() => setActiveIndex(index)}
-              className={`rounded-full lg:w-[200px] md:w-[130px] w-[72px] h-[50px] text-base font-medium transition-all leading-[150%] duration-300 ease-in-out focus:outline-none sm:text-base ${
+              className={`rounded-full lg:w-[200px] md:w-[130px] w-[72px] h-[50px] text-base font-medium transition-all leading-[150%] duration-300 ease-in-ot focus:outline-none sm:text-base ${
                 activeIndex === index
-                  ? "bg-gradient-to-b from-blue-500 to-cyan-400 text-white"
-                  : `border hover:bg-gray-800 `
+                  ? "bg-gradient-to-b from-blue-500 to-cyan-400 "
+                  : ``
               }`}
               style={
                 activeIndex === index
@@ -144,7 +142,7 @@ const PlotUnfolds: React.FC = () => {
             >
               {activeContent && (
                 <>
-                  <div className="mb-6 flex items-center gap-4 text-white ">
+                  <div className="mb-6 flex items-center gap-4  ">
                     <activeContent.icon size={24} />
                     <span className="font-medium text-lg text-start">
                       {activeContent.label}
@@ -158,14 +156,14 @@ const PlotUnfolds: React.FC = () => {
                       <p key={index}>{paragraph}</p>
                     ))}
                   </div>
-                  <p className="mt-2 font-bold !leading-[26px] lg:text-base text-sm text-white text-start">
+                  <p className="mt-2 font-bold !leading-[26px] lg:text-base text-sm  text-start">
                     {activeContent.tagline}
                   </p>
 
                   <motion.button
                     whileHover={{ scale: 1.05 }}
                     whileTap={{ scale: 0.95 }}
-                    className="mt-8 rounded-full border border-[#D8D8D8] h-[48px] px-8 font-semibold text-white transition-all duration-300 ease-in-out hover:border-purple-500 text-sm focus:outline-none flex items-center"
+                    className="mt-8 rounded-full border border-[#D8D8D8] h-[48px] px-8 font-semibold  transition-all duration-300 ease-in-out hover:border-purple-500 text-sm focus:outline-none flex items-center"
                     style={{
                       background: `radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%)`,
                     }}

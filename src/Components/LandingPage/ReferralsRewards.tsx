@@ -9,7 +9,7 @@ export default function ReferralsRewards() {
   ];
 
   return (
-    <div className="relative lg:pt-[245px] pt-[100px] text-white flex items-center justify-center font-renner">
+    <div className="relative lg:pt-[245px] pt-[100px]  flex items-center justify-center font-renner">
       <div
         className="absolute top-12 lg:right-0 md:-right-44 -right-72 h-[500px] w-[500px] -z-10"
         style={{

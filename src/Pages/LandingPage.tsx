@@ -108,18 +108,20 @@ import AnimateOnLg from "../Components/Animation/AnimateOnLg";
 
 function LandingPage() {
   return (
-    <>
+    <div className="text-[var(--primarytext)]">
       <Header />
 
       {/* HERO SECTION */}
-        <AnimateOnLg Animation={SlideInRight}>
-          <HeroSection />
-        </AnimateOnLg>
+      <AnimateOnLg Animation={SlideInLeft}>
+        <HeroSection />
+      </AnimateOnLg>
 
       <div className="md:px-8 px-4">
         {/* HOW IT WORKS */}
         <section id="how-it-works">
-          <PlotUnfolds />
+          <AnimateOnLg Animation={SlideInRight}>
+            <PlotUnfolds />
+          </AnimateOnLg>
         </section>
 
         {/* ROW TO ACTION */}
@@ -130,9 +132,9 @@ function LandingPage() {
         </section>
 
         {/* REFERRALS */}
-          <AnimateOnLg Animation={SlideInRight}>
-            <ReferralsRewards />
-          </AnimateOnLg>
+        <AnimateOnLg Animation={SlideInRight}>
+          <ReferralsRewards />
+        </AnimateOnLg>
 
         {/* CLAIM FORM */}
         <section id="contact">
@@ -143,7 +145,7 @@ function LandingPage() {
       </div>
 
       <Footer />
-    </>
+    </div>
   );
 }
 

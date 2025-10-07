@@ -38,7 +38,7 @@ const socialLinks = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#03000580] text-white pb-8 lg:pb-[42px] lg:pt-[121px] pt-[60px] lg:px-[60px] md:px-8 px-4 font-renner">
+    <footer className="bg-[#03000580]  pb-8 lg:pb-[42px] lg:pt-[121px] pt-[60px] lg:px-[60px] md:px-8 px-4 font-renner">
       <div className="flex md:flex-row flex-col md:justify-between lg:items-center md:items-start gap-12">
         <div className="items-center flex justify-center lg:ml-5 ml-0">
           <img
@@ -51,7 +51,7 @@ export default function Footer() {
         <div className="flex flex-row justify-center lg:gap-[92px] md:gap-[40px] gap-[25px] ">
           <div className="flex flex-row-reverse lg:flex-row justify-center lg:gap-[92px] md:gap-[40px] gap-[25px] ">
             <div>
-              <h3 className="text-white flex font-semibold leading-[150%] text-2xl mb-3">
+              <h3 className=" flex font-semibold leading-[150%] text-2xl mb-3">
                 Company
               </h3>
               <ul className="space-y-2">
@@ -59,7 +59,7 @@ export default function Footer() {
                   <li key={index}>
                     <a
                       href={item.href}
-                      className="text-[#D1D1D1] flex font-normal text-sm lg:text-base !leading-[150%] hover:text-white transition-colors"
+                      className="text-[var(--secondarytext)] flex font-normal text-sm lg:text-base !leading-[150%] hover: transition-colors"
                     >
                       {item.label}
                     </a>
@@ -69,7 +69,7 @@ export default function Footer() {
             </div>
 
             <div>
-              <h3 className="text-white flex font-semibold leading-[150%] text-2xl mb-3">
+              <h3 className=" flex font-semibold leading-[150%] text-2xl mb-3">
                 Help
               </h3>
               <ul className="space-y-2">
@@ -77,7 +77,7 @@ export default function Footer() {
                   <li key={index}>
                     <a
                       href={item.href}
-                      className="text-[#D1D1D1] block text-start font-normal text-sm lg:text-base !leading-[150%] hover:text-white transition-colors"
+                      className="text-[var(--secondarytext)] block text-start font-normal text-sm lg:text-base !leading-[150%] hover: transition-colors"
                     >
                       {item.label}
                     </a>
@@ -88,16 +88,12 @@ export default function Footer() {
           </div>
 
           <div>
-            <h3 className="text-white font-semibold leading-[150%] flex text-2xl mb-3">
+            <h3 className=" font-semibold leading-[150%] flex text-2xl mb-3">
               Follow Us
             </h3>
             <div className="flex gap-4">
               {socialLinks.map((item, index) => (
-                <a
-                  key={index}
-                  href={item.href}
-                  className="text-white font-normal text-base hover:text-cyan-400 transition-colors"
-                >
+                <a key={index} href={item.href}>
                   {item.icon}
                 </a>
               ))}
@@ -106,20 +102,9 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-center lg:text-base text-sm text-[#D1D1D1] font-normal lg:pt-[97px] !leading-[150%] pt-12">
+      <div className="text-center lg:text-base text-sm text-[var(--secondarytext)] font-normal lg:pt-[97px] !leading-[150%] pt-12">
         PlotPicks ©2025. All rights reserved.
       </div>
-      {/* <div className="relative">
-        <div
-          className="absolute -top-[480px] -right-[400px] h-[500px] w-[500px] -z-10 md:hidden flex"
-          style={{
-            background: `linear-gradient(to top right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
-            opacity: 0.15,
-            boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
-            filter: `blur(100px)`,
-          }}
-        ></div>
-      </div> */}
     </footer>
   );
 }

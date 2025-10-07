@@ -16,12 +16,11 @@ export default function ClaimSpotForm() {
 
   const onSubmit = (data: FormValues) => {
     console.log("Form Data:", data);
-    // 👉 Send this to your API here
+    //  Send this to your API here
   };
 
   return (
     <div className="lg:pb-[250px] pb-[100px] lg:pt-[245px] pt-[100px] flex items-center justify-center font-renner">
-      {/* Background Gradient Glow */}
       <div className="relative">
         <div
           className="absolute lg:-bottom-[680px] lg:-left-10 -left-56 h-[500px] w-[500px] -z-10 lg:flex md:hidden flex"
@@ -36,12 +35,11 @@ export default function ClaimSpotForm() {
 
       <div className="w-full relative flex items-center justify-center">
         <div className="flex flex-col lg:flex-row items-stretch w-full max-w-[1200px]">
-          {/* Entire form */}
+          {/* form */}
           <form
             onSubmit={handleSubmit(onSubmit)}
             className="flex flex-col lg:flex-row w-full"
           >
-            {/* Left side - Image */}
             <div className="relative hidden xl:block flex-1">
               <img
                 src={ClaimSpot}
@@ -51,24 +49,22 @@ export default function ClaimSpotForm() {
               />
             </div>
 
-            {/* Right side - Form */}
-            <div className="w-full lg:flex-1 flex flex-col items-center lg:items-start px-4 md:px-8 lg:px-0">
+            <div className="w-full lg:flex-1 flex flex-col items-center lg:items-start ">
               <div
-                className="relative w-full xl:w-auto xl:ml-4 rounded-t-3xl shadow-2xl p-6 pb-0 z-10 lg:min-w-[500px] h-full"
+                className="relative w-full xl:w-auto xl:ml-4 rounded-t-3xl shadow-2xl py-6 lg:px-6 px-4 pb-0 z-10 lg:min-w-[500px] h-full"
                 style={{
                   background: `radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(153,153,153,0.1) 100%)`,
                 }}
               >
-                <h2 className="text-white lg:text-4xl text-2xl font-semibold mb-4 !leading-[150%] text-start lg:text-left">
+                <h2 className=" lg:text-4xl text-2xl font-semibold mb-4 !leading-[150%] text-start lg:text-left">
                   Claim Your Spot on the Plot
                 </h2>
 
-                <p className="lg:text-base text-sm font-normal text-white mb-8 !leading-[150%] text-start lg:text-left">
+                <p className="lg:text-base text-sm font-normal  mb-8 !leading-[150%] text-start lg:text-left">
                   Be more than a spectator: lock in your place, get early perks,
                   and step into the story before anyone else
                 </p>
 
-                {/* Inputs */}
                 <div className="z-30 grid grid-cols-2 gap-4">
                   <div>
                     <input
@@ -77,7 +73,7 @@ export default function ClaimSpotForm() {
                       {...register("firstName", {
                         required: "First name is required",
                       })}
-                      className="w-full bg-[#464447] text-white placeholder:text-white rounded-xl px-6 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
+                      className="w-full bg-[#464447]  placeholder:text-[var(--primarytext)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.firstName && (
                       <p className="absolute left-8 text-red-400 text-xs mt-1">
@@ -93,7 +89,7 @@ export default function ClaimSpotForm() {
                       {...register("lastName", {
                         required: "Last name is required",
                       })}
-                      className="w-full bg-[#464447] text-white placeholder:text-white rounded-xl px-6 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
+                      className="w-full bg-[#464447]  placeholder:text-[var(--primarytext)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.lastName && (
                       <p className="absolute -bottom-[18px] ml-3 text-red-400 text-xs">
@@ -104,9 +100,8 @@ export default function ClaimSpotForm() {
                 </div>
               </div>
 
-              {/* Bottom Card */}
               <div
-                className="relative w-full rounded-b-3xl xl:rounded-tl-2xl px-6 pt-4 pb-8 xl:p-5 z-10 flex flex-col md:items-center md:flex-row gap-4 xl:-ml-[120px] xl:min-w-[744px] h-full"
+                className="relative w-full rounded-b-3xl xl:rounded-tl-2xl lg:px-6 px-4 pt-4 pb-8 xl:p-5 z-10 flex flex-col md:items-center md:flex-row gap-4 xl:-ml-[120px] xl:min-w-[744px] h-full"
                 style={{
                   background: `radial-gradient(50% 50% at 50% 50%, rgba(255,255,255,0.1) 0%, rgba(153,153,153,0.1) 100%)`,
                 }}
@@ -122,7 +117,7 @@ export default function ClaimSpotForm() {
                         message: "Enter a valid email",
                       },
                     })}
-                    className="w-full bg-[#464447] text-white placeholder:text-white rounded-xl px-6 py-[15px] text-sm focus:outline-none"
+                    className="w-full bg-[#464447]  placeholder:text-[var(--primarytext)] rounded-xl lg:px-6 px-4 py-[15px] text-sm focus:outline-none"
                   />
                   {errors.email && (
                     <p className="absolute left-8 text-red-400 text-xs mt-1">
@@ -138,7 +133,7 @@ export default function ClaimSpotForm() {
                   <span className="absolute inset-0 rounded-[32px] [background:linear-gradient(138.91deg,#0385FF_-3.35%,#06F1BA_101.24%)]"></span>
                   <span
                     className="relative flex items-center justify-center w-full h-full rounded-[32px]  
-                    font-renner font-semibold text-[14px] leading-[100%] text-center text-white"
+                    font-renner font-semibold text-[14px] leading-[100%] text-center "
                   >
                     Join Now
                   </span>
