@@ -11,11 +11,12 @@ const Button: React.FC<ButtonProps> = ({
   ...props
 }) => {
   return (
-    <div className="relative inline-block rounded-[32px] py-[1px] px-[1px] overflow-hidden group h-[50px]">
+    <div className="relative inline-block rounded-[32px] py-[1px] px-[2px] overflow-hidden group h-[50px]">
   <div
-    className="absolute inset-0 overflow-hidden rounded-[32px] group-hover:hidden transition-all duration-300  bg-gradient-to-br from-[#8E24AA] via-[#8E24AA] to-[#000000]"
+    className="absolute inset-0 overflow-hidden rounded-[32px] group-hover:hidden transition-all duration-300  "
     style={{
       animation: "move-border 1.5s linear infinite",
+      background: `linear-gradient(144.46deg, #8E24AA -35.11%, #000000 82.19%)`
     }}
   ></div>
 
