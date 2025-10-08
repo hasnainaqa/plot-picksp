@@ -1,6 +1,5 @@
 // src/Components/LandingPage/PlotUnfolds.tsx
 import { useState } from "react";
-import { useEffect } from "react";
 import { Eye, Lightbulb, Trophy, Banknote } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { type LucideIcon } from "lucide-react";
@@ -74,15 +73,6 @@ const tabData: TabData[] = [
 const PlotUnfolds: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
   const activeContent = tabData[activeIndex]; 
-  const [currentImage, setCurrentImage] = useState(activeContent.image);
-
-  useEffect(() => {
-    const img = new Image();
-    img.src = activeContent.image;
-    img.onload = () => {
-      setCurrentImage(activeContent.image);
-    };
-  }, [activeContent.image]);
 
   // useEffect(() => {
   //   const interval = setInterval(() => {
@@ -178,8 +168,8 @@ const PlotUnfolds: React.FC = () => {
               <div className="h-full w-full rounded-2xl overflow-hidden">
                 <AnimatePresence mode="wait">
                   <motion.img
-                    key={currentImage}
-                    src={currentImage}
+                    key={activeContent?.image}
+                    src={activeContent?.image}
                     alt={activeContent?.title}
                     initial={{ opacity: 0 }}
                     animate={{ opacity: 1 }}
