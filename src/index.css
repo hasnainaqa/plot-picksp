@@ -4,14 +4,14 @@
 
 @layer components {
   .heading {
-    @apply font-bold lg:font-semibold !leading-[150%] text-[var(--primarytext)] lg:text-5xl text-2xl;
+    @apply font-bold lg:font-semibold !leading-[150%] text-[var(--primary-text)] lg:text-5xl text-2xl;
   }
 }
 
 :root {
-  --primarybg: #030005;
-  --primarytext: #ffffff;
-  --secondarytext: #d1d1d1;
+  --primary-bg: #030005;
+  --primary-text: #ffffff;
+  --secondary-text: #d1d1d1;
 }
 
 #root {
@@ -25,7 +25,7 @@ html, body{
 }
 
 body {
-  background-color: var(--primarybg);
+  background-color: var(--primary-bg);
 }
 
 @font-face {
@@ -81,6 +81,6 @@ body {
 
 /* Optional: Hide scrollbar */
 
-/* body::-webkit-scrollbar {
+body::-webkit-scrollbar {
   display: none;
-} */
+}

@@ -59,7 +59,7 @@ export default function Footer() {
                   <li key={index}>
                     <a
                       href={item.href}
-                      className="text-[var(--secondarytext)] flex font-normal text-sm lg:text-base !leading-[150%] hover: transition-colors"
+                      className="text-[var(--secondary-text)] flex font-normal text-sm lg:text-base !leading-[150%] hover: transition-colors"
                     >
                       {item.label}
                     </a>
@@ -77,7 +77,7 @@ export default function Footer() {
                   <li key={index}>
                     <a
                       href={item.href}
-                      className="text-[var(--secondarytext)] block text-start font-normal text-sm lg:text-base !leading-[150%] hover: transition-colors"
+                      className="text-[var(--secondary-text)] block text-start font-normal text-sm lg:text-base !leading-[150%] hover: transition-colors"
                     >
                       {item.label}
                     </a>
@@ -102,7 +102,7 @@ export default function Footer() {
         </div>
       </div>
 
-      <div className="text-center lg:text-base text-sm text-[var(--secondarytext)] font-normal lg:pt-[97px] !leading-[150%] pt-12">
+      <div className="text-center lg:text-base text-sm text-[var(--secondary-text)] font-normal lg:pt-[97px] !leading-[150%] pt-12">
         PlotPicks ©2025. All rights reserved.
       </div>
     </footer>

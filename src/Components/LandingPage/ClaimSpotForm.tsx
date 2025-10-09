@@ -73,7 +73,7 @@ export default function ClaimSpotForm() {
                       {...register("firstName", {
                         required: "First name is required",
                       })}
-                      className="w-full bg-[#464447]  placeholder:text-[var(--primarytext)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
+                      className="w-full bg-[#464447]  placeholder:text-[var(--primary-text)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.firstName && (
                       <p className="absolute left-8 text-red-400 text-xs mt-1">
@@ -89,7 +89,7 @@ export default function ClaimSpotForm() {
                       {...register("lastName", {
                         required: "Last name is required",
                       })}
-                      className="w-full bg-[#464447]  placeholder:text-[var(--primarytext)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
+                      className="w-full bg-[#464447]  placeholder:text-[var(--primary-text)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.lastName && (
                       <p className="absolute -bottom-[18px] ml-3 text-red-400 text-xs">
@@ -117,7 +117,7 @@ export default function ClaimSpotForm() {
                         message: "Enter a valid email",
                       },
                     })}
-                    className="w-full bg-[#464447]  placeholder:text-[var(--primarytext)] rounded-xl lg:px-6 px-4 py-[15px] text-sm focus:outline-none"
+                    className="w-full bg-[#464447]  placeholder:text-[var(--primary-text)] rounded-xl lg:px-6 px-4 py-[15px] text-sm focus:outline-none"
                   />
                   {errors.email && (
                     <p className="absolute left-8 text-red-400 text-xs mt-1">

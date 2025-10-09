@@ -14,7 +14,7 @@ import AnimateOnLg from "../Components/Animation/AnimateOnLg";
 
 function LandingPage() {
   return (
-    <div className="text-[var(--primarytext)]">
+    <div className="text-[var(--primary-text)]">
       <Header />
 
       {/* HERO SECTION */}
