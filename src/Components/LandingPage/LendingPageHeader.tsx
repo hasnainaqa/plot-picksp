@@ -72,9 +72,9 @@ const Header: React.FC = () => {
             animate={{ opacity: 1, y: 0, height: "auto" }}
             exit={{ opacity: 0, y: -10, height: 0 }}
             transition={{ duration: 0.35, ease: "easeInOut" }}
-            className="lg:hidden mt-3 md:flex justify-end overflow-hidden"
+            className="lg:hidden mt-3 flex justify-center overflow-hidden md:-ml-8 -ml-3 w-screen p-10 bg-[#030005] "
           >
-            <div className="flex flex-col space-y-4 p-6 rounded-2xl shadow-xl md:px-20 backdrop-blur-md bg-[#030005]/80 border border-white/10">
+            <div className="flex flex-col space-y-4 rounded-2xl">
               {menuItems.map((item, index) => (
                 <motion.a
                   key={index}
@@ -82,7 +82,7 @@ const Header: React.FC = () => {
                   initial={{ opacity: 0, y: -5 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.05, duration: 0.25 }}
-                  className="hover:text-cyan-400 transition-colors duration-200 flex"
+                  className="hover:text-cyan-400 transition-colors duration-200 text-base"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.label}
@@ -93,7 +93,7 @@ const Header: React.FC = () => {
                 href="#contact"
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: menuItems.length * 0.05, duration: 0.3 }}
-                className="h-[48px] rounded-[32px] px-8 text-[14px] font-semibold leading-[100%] text-center flex items-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]"
+                className="h-[48px] rounded-[32px] px-8  text-[14px] font-semibold leading-[100%] text-center flex items-center [background:linear-gradient(144.46deg,#8E24AA_-35.11%,#000000_82.19%)]"
               >
                 Join the Waitlist Now
               </motion.a>
