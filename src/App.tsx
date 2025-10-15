@@ -6,7 +6,6 @@ const App = () => {
       <LandingPage />
     </>
   );
-  
 };
 
 export default App;

@@ -72,7 +72,7 @@ const tabData: TabData[] = [
 
 const PlotUnfolds: React.FC = () => {
   const [activeIndex, setActiveIndex] = useState<number>(0);
-  const activeContent = tabData[activeIndex]; 
+  const activeContent = tabData[activeIndex];
 
   // useEffect(() => {
   //   const interval = setInterval(() => {

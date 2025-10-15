@@ -62,22 +62,21 @@ body {
 
 @keyframes move-border {
   0% {
-    clip-path: inset(70% 0 0 0);     /* left */
+    clip-path: inset(70% 0 0 0); /* left */
   }
   15% {
-    clip-path: inset(0 70% 0 0);     /* top */
+    clip-path: inset(0 70% 0 0); /* top */
   }
   55% {
-    clip-path: inset(0 0 70% 0);     /* right – slower / linger */
+    clip-path: inset(0 0 70% 0); /* right – slower / linger */
   }
   80% {
-    clip-path: inset(0 0 0 70%);     /* bottom */
+    clip-path: inset(0 0 0 70%); /* bottom */
   }
   100% {
-    clip-path: inset(70% 0 0 0);     /* back to left */
+    clip-path: inset(70% 0 0 0); /* back to left */
   }
 }
-
 
 /* Optional: Hide scrollbar */
 

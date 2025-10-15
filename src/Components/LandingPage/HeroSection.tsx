@@ -24,7 +24,6 @@ const HeroSection: React.FC = () => {
         ></div>
       </div>
       <section className="flex items-center justify-center lg:pt-[320px] pt-[151px] px-7  font-renner">
-
         <div className="flex flex-col items-center text-center">
           <h1 className="mb-4 heading">
             Join the Future of Entertainment, Reimagined
