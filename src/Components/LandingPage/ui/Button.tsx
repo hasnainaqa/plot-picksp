@@ -16,8 +16,7 @@ const Button: React.FC<ButtonProps> = ({
         className="absolute inset-0 overflow-hidden rounded-[32px] group-hover:hidden transition-all duration-300  "
         style={{
           animation: "move-border 1.5s linear infinite",
-          background: ` linear-gradient(144.46deg, #8E24AA -35.11%, #000000 82.19%) border-box
-    `,
+          background: ` linear-gradient(144.46deg, #8E24AA -35.11%, #000000 82.19%) border-box`,
         }}
       ></div>
 
