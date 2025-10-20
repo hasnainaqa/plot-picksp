@@ -76,13 +76,13 @@ export default function ClaimSpotForm() {
                       className="w-full bg-[#464447]  placeholder:text-[var(--primary-text)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.firstName && (
-                      <p className="absolute left-8 text-red-400 text-xs mt-1">
+                      <p className=" xl:absolute right-[calc(50%+8px)] mt-1 flex justify-end mr-4 text-red-400 text-xs">
                         {errors.firstName.message}
                       </p>
                     )}
                   </div>
 
-                  <div className="flex lg:flex-row flex-col">
+                  <div >
                     <input
                       type="text"
                       placeholder="Last Name"
@@ -92,7 +92,7 @@ export default function ClaimSpotForm() {
                       className="w-full bg-[#464447]  placeholder:text-[var(--primary-text)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.lastName && (
-                      <p className="absolute -bottom-[18px] ml-3 text-red-400 text-xs">
+                      <p className="xl:absolute right-6 mt-1 flex justify-end mr-4 text-red-400 text-xs">
                         {errors.lastName.message}
                       </p>
                     )}
@@ -120,7 +120,7 @@ export default function ClaimSpotForm() {
                     className="w-full bg-[#464447]  placeholder:text-[var(--primary-text)] rounded-xl lg:px-6 px-4 py-[15px] text-sm focus:outline-none"
                   />
                   {errors.email && (
-                    <p className="absolute left-8 text-red-400 text-xs mt-1">
+                    <p className="md:absolute right-44 flex justify-end text-red-400 text-xs mt-1">
                       {errors.email.message}
                     </p>
                   )}
