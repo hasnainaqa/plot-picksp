@@ -120,7 +120,7 @@ export default function ClaimSpotForm() {
                     className="w-full bg-[#464447]  placeholder:text-[var(--primary-text)] rounded-xl lg:px-6 px-4 py-[15px] text-sm focus:outline-none"
                   />
                   {errors.email && (
-                    <p className="absolute md:right-44 right-10 flex justify-end text-red-400 lg:text-xs text-[10px] xl:mt-1 mt-0.5">
+                    <p className="absolute md:right-44 right-10 flex justify-end text-red-400 lg:text-xs text-[10px] md:mt-1 mt-0.5">
                       {errors.email.message}
                     </p>
                   )}
