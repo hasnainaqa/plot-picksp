@@ -76,7 +76,7 @@ export default function ClaimSpotForm() {
                       className="w-full bg-[#464447]  placeholder:text-[var(--primary-text)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.firstName && (
-                      <p className=" absolute right-[calc(50%+8px)] xl:mt-1 mt-px flex justify-end mr-4 text-red-400 md:text-xs text-[10px]">
+                      <p className=" absolute right-[calc(50%+8px)] md:mt-1 mt-px flex justify-end mr-4 text-red-400 md:text-xs text-[10px]">
                         {errors.firstName.message}
                       </p>
                     )}
@@ -92,7 +92,7 @@ export default function ClaimSpotForm() {
                       className="w-full bg-[#464447]  placeholder:text-[var(--primary-text)] rounded-xl lg:px-6 px-4 xl:py-5 py-[15px] text-sm font-normal focus:outline-none"
                     />
                     {errors.lastName && (
-                      <p className="absolute right-6 xl:mt-1 mt-px flex justify-end mr-4 text-red-400 md:text-xs text-[10px]">
+                      <p className="absolute right-6 md:mt-1 mt-px flex justify-end mr-4 text-red-400 md:text-xs text-[10px]">
                         {errors.lastName.message}
                       </p>
                     )}
