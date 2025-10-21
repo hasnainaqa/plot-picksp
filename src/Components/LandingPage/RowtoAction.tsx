@@ -1,9 +1,9 @@
 import React from "react";
-import RowToAction1 from "./LandingPageAssets/RowToAction1.svg";
-import RowToAction2_o from "./LandingPageAssets/RowToAction2_o.svg";
-import RowToAction2in1 from "./LandingPageAssets/RowToAction2in1.svg";
-import RowToAction3 from "./LandingPageAssets/RowToAction3.svg";
-import RowToAction4 from "./LandingPageAssets/RowToAction4.svg";
+import RowToAction1 from "./assets/RowToAction1.svg";
+import RowToAction2_o from "./assets/RowToAction2_o.svg";
+import RowToAction2in1 from "./assets/RowToAction2in1.svg";
+import RowToAction3 from "./assets/RowToAction3.svg";
+import RowToAction4 from "./assets/RowToAction4.svg";
 
 type Feature = {
   texts: string[]; // allow multiple texts

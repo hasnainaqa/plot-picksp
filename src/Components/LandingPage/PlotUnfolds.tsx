@@ -3,10 +3,10 @@ import { useState } from "react";
 import { Eye, Lightbulb, Trophy, Banknote } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { type LucideIcon } from "lucide-react";
-import PlotUnfold from "./LandingPageAssets/PlotUnfold.svg";
-import Predict from "./LandingPageAssets/Predict.svg";
-import Win from "./LandingPageAssets/Win.svg";
-import GetPaid from "./LandingPageAssets/GetPaid.svg";
+import PlotUnfold from "./assets/PlotUnfold.svg";
+import Predict from "./assets/Predict.svg";
+import Win from "./assets/Win.svg";
+import GetPaid from "./assets/GetPaid.svg";
 
 type TabData = {
   id: string;

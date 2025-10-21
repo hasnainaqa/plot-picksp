@@ -1,5 +1,5 @@
 import { Instagram } from "lucide-react";
-import FooterLogo from "./LandingPageAssets/FooterLogo.svg";
+import FooterLogo from "./assets/FooterLogo.svg";
 
 const companyLinks = [
   { label: "About", href: "#" },

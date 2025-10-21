@@ -1,4 +1,4 @@
-import ClaimSpot from "./LandingPageAssets/ClaimSpot.svg";
+import ClaimSpot from "./assets/ClaimSpot.svg";
 import { useForm } from "react-hook-form";
 
 type FormValues = {
