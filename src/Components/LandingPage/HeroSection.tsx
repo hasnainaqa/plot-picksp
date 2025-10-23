@@ -15,9 +15,10 @@ const HeroSection: React.FC = () => {
       <div className="relative">
         <div
           className="absolute inset-0 
+           xl:w-[700px] 
           lg:h-[600px] lg:w-[600px] 
           md:h-[380px] md:w-[380px] 
-          h-[300px] w-[300px]  lg:-left-12 xl:left-0 xl:-top-2 -top-10 -z-10"
+          h-[300px] w-[300px]  lg:-left-12 xl:-left-10 xl:-top-16 xl:w-[700px md:-left-20 -left-20 -top-10 -z-10"
           style={{
             background: `linear-gradient(46.53deg, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
             opacity: 0.15,
