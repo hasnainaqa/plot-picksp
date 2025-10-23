@@ -1,5 +1,6 @@
 import ClaimSpot from "./assets/ClaimSpot.svg";
 import { useForm } from "react-hook-form";
+import { useState, useEffect } from "react";
 
 type FormValues = {
   firstName: string;
@@ -12,11 +13,69 @@ export default function ClaimSpotForm() {
     register,
     handleSubmit,
     formState: { errors },
+    reset,
   } = useForm<FormValues>();
 
-  const onSubmit = (data: FormValues) => {
-    console.log("Form Data:", data);
-    //  Send this to your API here
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<{
+    type: "success" | "error" | null;
+    message: string;
+  }>({ type: null, message: "" });
+
+  // Auto-dismiss messages after 3 seconds
+  useEffect(() => {
+    if (submitStatus.type) {
+      const timer = setTimeout(() => {
+        setSubmitStatus({ type: null, message: "" });
+      }, 3000);
+
+      return () => clearTimeout(timer);
+    }
+  }, [submitStatus.type]);
+
+  const onSubmit = async (data: FormValues) => {
+    setIsSubmitting(true);
+    setSubmitStatus({ type: null, message: "" });
+
+    try {
+      const formspreeEndpoint = import.meta.env.VITE_FORMSPREE_ENDPOINT;
+
+      if (!formspreeEndpoint) {
+        throw new Error("Formspree endpoint not configured");
+      }
+
+      const response = await fetch(formspreeEndpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          firstName: data.firstName,
+          lastName: data.lastName,
+          email: data.email,
+        }),
+      });
+
+      if (response.ok) {
+        setSubmitStatus({
+          type: "success",
+          message:
+            "Thank you! Your information has been submitted successfully.",
+        });
+        reset(); // Clear the form
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Form submission error:", error);
+      setSubmitStatus({
+        type: "error",
+        message:
+          "Sorry, there was an error submitting your information. Please try again.",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -65,6 +124,19 @@ export default function ClaimSpotForm() {
                   and step into the story before anyone else
                 </p>
 
+                {/* Status Message */}
+                {submitStatus.type && (
+                  <div
+                    className={`mb-4 p-3 rounded-lg text-sm ${
+                      submitStatus.type === "success"
+                        ? "bg-green-100 text-green-800 border border-green-200"
+                        : "bg-red-100 text-red-800 border border-red-200"
+                    }`}
+                  >
+                    {submitStatus.message}
+                  </div>
+                )}
+
                 <div className="z-30 grid grid-cols-2 gap-4">
                   <div>
                     <input
@@ -82,7 +154,7 @@ export default function ClaimSpotForm() {
                     )}
                   </div>
 
-                  <div >
+                  <div>
                     <input
                       type="text"
                       placeholder="Last Name"
@@ -128,14 +200,17 @@ export default function ClaimSpotForm() {
 
                 <button
                   type="submit"
-                  className="relative inline-block h-[42px] rounded-[32px] px-8 overflow-hidden group"
+                  disabled={isSubmitting}
+                  className={`relative inline-block h-[42px] rounded-[32px] px-8 overflow-hidden group ${
+                    isSubmitting ? "opacity-75 cursor-not-allowed" : ""
+                  }`}
                 >
                   <span className="absolute inset-0 rounded-[32px] [background:linear-gradient(138.91deg,#0385FF_-3.35%,#06F1BA_101.24%)]"></span>
                   <span
                     className="relative flex items-center justify-center w-full h-full rounded-[32px]  
                     font-renner font-semibold text-[14px] leading-[100%] text-center "
                   >
-                    Join Now
+                    {isSubmitting ? "Submitting..." : "Join Now"}
                   </span>
                 </button>
               </div>
