@@ -30,7 +30,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
       {texts.length === 1 ? (
         <div className="absolute inset-0 flex items-center lg:justify-center p-4 sm:p-6">
-          <h3 className="text-lg text-start lg:text-2xl font-semibold  md:text-center leading-[150%] ">
+          <h3 className="text-lg text-left lg:text-2xl font-semibold md:text-left leading-[150%] ">
             {texts[0]}
           </h3>
         </div>
@@ -39,7 +39,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
           <h3 className="text-lg lg:text-2xl w-1/3 flex items-center justify-center font-semibold  text-left leading-[150%]">
             {texts[0]}
           </h3>
-          <h3 className="text-lg lg:text-2xl w-1/2 flex items-center justify-center font-semibold  text-right leading-[150%]">
+          <h3 className="text-lg lg:text-2xl w-1/2 flex items-center justify-center font-semibold pl-4 text-left leading-[150%]">
             {texts[1]}
           </h3>
         </div>
