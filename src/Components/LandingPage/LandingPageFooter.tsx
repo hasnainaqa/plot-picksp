@@ -39,6 +39,17 @@ const socialLinks = [
 export default function Footer() {
   return (
     <footer className="bg-[#03000580]  pb-8 lg:pb-[42px] lg:pt-[121px] pt-[60px] lg:px-[60px] md:px-8 px-4 font-renner">
+            <div className="relative">
+        <div
+          className="absolute lg:-top-[280px] -top-[100px]  lg:-left-10 -left-56 lg:h-[200px] h-[100px] w-[500px]  lg:flex md:hidden flex"
+          style={{
+            background: `linear-gradient(to top right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
+            opacity: 0.15,
+            boxShadow: `0px 4px 4px rgba(0, 0, 0, 0.25)`,
+            filter: `blur(100px)`,
+          }}
+        ></div>
+      </div>
       <div className="flex md:flex-row flex-col md:justify-between lg:items-center md:items-start gap-12">
         <div className="items-center flex justify-center lg:ml-5 ml-0">
           <img

@@ -23,7 +23,7 @@ export default function ClaimSpotForm() {
     <div className="lg:pb-[250px] pb-[100px] lg:pt-[245px] pt-[100px] flex items-center justify-center font-renner">
       <div className="relative">
         <div
-          className="absolute lg:-bottom-[680px] lg:-left-10 -left-56 h-[500px] w-[500px] -z-10 lg:flex md:hidden flex"
+          className="absolute lg:-bottom-[680px] -bottom-[550px] lg:-left-10 -left-56 lg:h-[500px] h-[300px] w-[500px] -z-10 lg:flex md:hidden flex"
           style={{
             background: `linear-gradient(to top right, #06F1BA 30.19%, #0385FF 69.08%), #4F0070`,
             opacity: 0.15,
