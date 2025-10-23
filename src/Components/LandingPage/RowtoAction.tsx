@@ -50,7 +50,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 
 const RowtoAction: React.FC = () => {
   return (
-    <section className="max-w-7xl mx-auto  font-renner flex items-center  lg:pt-[250px] pt-[100px]">
+    <section className="max-w-7xl mx-auto  font-renner flex items-center  lg:pt-[250px] pt-[100px] lg:px-8">
       <div className="w-full mx-auto">
         <h2 className="heading mb-8 lg:mb-[51px] text-start">
           Front Row to the Action
