@@ -120,7 +120,7 @@ export default function ClaimSpotForm() {
                 </h2>
 
                 <p className="lg:text-base text-sm font-normal  mb-8 !leading-[150%] text-start lg:text-left">
-                  Be more than a spectator: lock in your place, get early perks,
+                  Be more than a spectator lock in your place, get early perks,
                   and step into the story before anyone else
                 </p>
 

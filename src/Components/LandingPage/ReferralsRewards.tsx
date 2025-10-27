@@ -3,7 +3,7 @@ import Button from "./ui/Button";
 
 export default function ReferralsRewards() {
   const paragraphs = [
-    "Turn the waitlist into your first big win. Every friend you invite isn't just another signup: they're your power-up.",
+    "Turn the waitlist into your first big win. Every friend you invite isn't just another signup they're your power-up.",
     "Stack referrals to unlock exclusive perks: early beta access, bonus contest entries, and special rewards that put you ahead before the first game even begins.",
     "The bigger your squad, the bigger your edge. Build your crew, climb the ranks, and cement your place as a PlotPicks pioneer. Don't just stand in line, lead it.",
   ];
