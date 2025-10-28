@@ -17,9 +17,11 @@ function LandingPage() {
       <Header />
 
       {/* HERO SECTION */}
+      <section id = "landing-page-hero">
       <AnimateOnLg Animation={SlideInLeft}>
         <HeroSection />
       </AnimateOnLg>
+      </section>
 
       <div className="md:px-8 px-4">
         {/* HOW IT WORKS */}

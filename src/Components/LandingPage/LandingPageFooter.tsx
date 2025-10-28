@@ -2,9 +2,9 @@ import { Instagram } from "lucide-react";
 import FooterLogo from "./assets/FooterLogo.svg";
 
 const companyLinks = [
-  { label: "About", href: "#" },
-  { label: "How it Works", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "About", href: "#landing-page-hero" },
+  { label: "How It Works", href: "#how-it-works" },
+  { label: "Contact", href: "#contact" },
 ];
 const helpLinks = [
   { label: "FAQs", href: "#" },
@@ -70,6 +70,14 @@ export default function Footer() {
                   <li key={index}>
                     <a
                       href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const section = document.querySelector(item.href);
+                        section?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }}
                       className="text-[var(--secondary-text)] flex font-normal text-sm lg:text-base !leading-[150%] hover: transition-colors"
                     >
                       {item.label}
