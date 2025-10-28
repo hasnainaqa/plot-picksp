@@ -2,17 +2,17 @@ import { Instagram } from "lucide-react";
 import FooterLogo from "./assets/FooterLogo.svg";
 
 const companyLinks = [
-  { label: "About", href: "#landing-page-hero" },
-  { label: "How It Works", href: "#how-it-works" },
-  { label: "Contact", href: "#contact" },
+  { label: "How it Works", href: "#how-it-works" },
+    { label: "Rewards", href: "#rewards" },
+    { label: "Contact", href: "#contact" },
 ];
-const helpLinks = [
-  { label: "FAQs", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Cookies", href: "#" },
-  { label: "Disclaimer", href: "#" },
-  { label: "Terms & Conditions", href: "#" },
-];
+// const helpLinks = [
+//   { label: "FAQs", href: "#" },
+//   { label: "Privacy Policy", href: "#" },
+//   { label: "Cookies", href: "#" },
+//   { label: "Disclaimer", href: "#" },
+//   { label: "Terms & Conditions", href: "#" },
+// ];
 const socialLinks = [
   {
     href: "#",
@@ -87,7 +87,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <h3 className=" flex font-semibold leading-[150%] text-2xl mb-3">
                 Help
               </h3>
@@ -103,7 +103,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
 
           <div>
