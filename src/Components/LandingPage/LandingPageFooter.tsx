@@ -2,17 +2,17 @@ import { Instagram } from "lucide-react";
 import FooterLogo from "./assets/FooterLogo.svg";
 
 const companyLinks = [
-  { label: "About", href: "#" },
-  { label: "How it Works", href: "#" },
-  { label: "Contact", href: "#" },
+  { label: "How it Works", href: "#how-it-works" },
+    { label: "Rewards", href: "#rewards" },
+    { label: "Contact", href: "#contact" },
 ];
-const helpLinks = [
-  { label: "FAQs", href: "#" },
-  { label: "Privacy Policy", href: "#" },
-  { label: "Cookies", href: "#" },
-  { label: "Disclaimer", href: "#" },
-  { label: "Terms & Conditions", href: "#" },
-];
+// const helpLinks = [
+//   { label: "FAQs", href: "#" },
+//   { label: "Privacy Policy", href: "#" },
+//   { label: "Cookies", href: "#" },
+//   { label: "Disclaimer", href: "#" },
+//   { label: "Terms & Conditions", href: "#" },
+// ];
 const socialLinks = [
   {
     href: "#",
@@ -70,6 +70,14 @@ export default function Footer() {
                   <li key={index}>
                     <a
                       href={item.href}
+                      onClick={(e) => {
+                        e.preventDefault();
+                        const section = document.querySelector(item.href);
+                        section?.scrollIntoView({
+                          behavior: "smooth",
+                          block: "start",
+                        });
+                      }}
                       className="text-[var(--secondary-text)] flex font-normal text-sm lg:text-base !leading-[150%] hover: transition-colors"
                     >
                       {item.label}
@@ -79,7 +87,7 @@ export default function Footer() {
               </ul>
             </div>
 
-            <div>
+            {/* <div>
               <h3 className=" flex font-semibold leading-[150%] text-2xl mb-3">
                 Help
               </h3>
@@ -95,7 +103,7 @@ export default function Footer() {
                   </li>
                 ))}
               </ul>
-            </div>
+            </div> */}
           </div>
 
           <div>
