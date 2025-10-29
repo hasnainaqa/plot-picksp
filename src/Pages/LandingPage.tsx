@@ -17,10 +17,10 @@ function LandingPage() {
       <Header />
 
       {/* HERO SECTION */}
-      <section id = "landing-page-hero">
-      <AnimateOnLg Animation={SlideInLeft}>
-        <HeroSection />
-      </AnimateOnLg>
+      <section id="landing-page-hero">
+        <AnimateOnLg Animation={SlideInLeft}>
+          <HeroSection />
+        </AnimateOnLg>
       </section>
 
       <div className="md:px-8 px-4">
@@ -32,16 +32,16 @@ function LandingPage() {
         </section>
 
         {/* ROW TO ACTION */}
-        <section id="rewards">
-          <AnimateOnLg Animation={SlideInLeft}>
-            <RowtoAction />
-          </AnimateOnLg>
-        </section>
+        <AnimateOnLg Animation={SlideInLeft}>
+          <RowtoAction />
+        </AnimateOnLg>
 
         {/* REFERRALS */}
-        <AnimateOnLg Animation={SlideInRight}>
-          <ReferralsRewards />
-        </AnimateOnLg>
+        <section id="rewards">
+          <AnimateOnLg Animation={SlideInRight}>
+            <ReferralsRewards />
+          </AnimateOnLg>
+        </section>
 
         {/* CLAIM FORM */}
         <section id="contact">

@@ -36,7 +36,15 @@ const HeroSection: React.FC = () => {
             Be the first to experience PlotPicks the app that lets you predict
             what happens next in your favorite shows and win rewards.
           </p>
-          <Button className="">Join Now</Button>
+          <Button
+            onClick={() => {
+              const contact = document.querySelector("#contact");
+              contact?.scrollIntoView({ behavior: "smooth", block: "start" });
+            }}
+            className=""
+          >
+            Join Now
+          </Button>
         </div>
       </section>
     </div>

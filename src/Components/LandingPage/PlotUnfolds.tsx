@@ -157,6 +157,13 @@ const PlotUnfolds: React.FC = () => {
                     style={{
                       background: `radial-gradient(50% 50% at 50% 50%, rgba(255, 255, 255, 0.1) 0%, rgba(153, 153, 153, 0.1) 100%)`,
                     }}
+                    onClick={() => {
+                      const contact = document.querySelector("#contact");
+                      contact?.scrollIntoView({
+                        behavior: "smooth",
+                        block: "start",
+                      });
+                    }}
                   >
                     Join Now
                   </motion.button>
